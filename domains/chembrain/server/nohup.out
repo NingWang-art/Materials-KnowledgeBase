@@ -1,0 +1,434 @@
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting ChemBrain Structured Search MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50007
+INFO:__main__:Structured search system ready
+INFO:     Started server process [169934]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50007 (Press CTRL+C to quit)
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting ChemBrain Structured Search MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50003
+INFO:__main__:Structured search system ready
+INFO:     Started server process [170293]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50003 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [170293]
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting ChemBrain Structured Search MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50003
+INFO:__main__:Structured search system ready
+INFO:     Started server process [172190]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50003 (Press CTRL+C to quit)
+INFO:     101.201.40.38:55706 - "GET /sse HTTP/1.1" 200 OK
+INFO:     101.201.40.38:55710 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:55710 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:55710 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:55710 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 09:30:39,832 - INFO - Job processing (Trace ID: 2025-12-01-09:30:39.832868)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-09:30:39.832868)
+INFO:__main__:收到查询: 查找玻璃化转变温度低于400°C的聚酰亚胺相关论文
+INFO:root:开始处理查询: 查找玻璃化转变温度低于400°C的聚酰亚胺相关论文
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+INFO:root:成功转换查询为filters: {'filters': {'and': [{'field': 'table', 'operator': 'eq', 'value': '690hd00'}, {'field': 'polymer_name', 'operator': 'like', 'value': '%polyimide%'}, {'field': 'glass_transition_temperature', 'operator': 'lt', 'value': 400}]}}
+INFO:root:步骤2: 执行数据库查询...
+INFO:root:数据库查询完成，找到 48 篇论文
+INFO:root:找到 48 篇相关论文: ['10.1177/0954008313512141', '10.1002/app.28145', '10.1016/s0141-3910(03)00092-2', '10.1016/j.compositesb.2012.04.055', '10.1002/pat.1755']...
+INFO:root:步骤3: 检查文献全文可用性...
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.28145, 长度: 25041 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1166/jnn.2012.4518
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/0954008313512141
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.4028/www.scientific.net/AMR.139-141.9
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/0892705710369867
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.compositesb.2012.04.055
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.vacuum.2016.04.022
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.compositesa.2015.08.022
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/s0141-3910(03)00092-2, 长度: 22716 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1155/2018/7914727
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.sna.2021.112672
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1002/polb.24610
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1177/096739111402200205, 长度: 17914 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1039/c1jm12166a
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1080/03602559.2013.828230
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.matdes.2011.02.059
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/0892705718805535
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1039/c2ee21996d, 长度: 57990 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1007/s12221-012-0769-5
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pat.1755, 长度: 26593 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pola.22782, 长度: 34953 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1081/PPT-100000247
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/1528083720932337
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1109/TDEI.2016.7736838
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.ijadhadh.2008.05.001
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1002/adma.201703992
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/096739110501300705
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.3390/su13041788
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/j.ssi.2016.04.004, 长度: 31035 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.compscitech.2007.01.016
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1016/j.egypro.2017.07.022
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1007/s002890050228
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.30344, 长度: 31511 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1007/s13233-016-4036-2, 长度: 21970 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1002/pc.22284
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/0021998310371551
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1007/s12221-015-0223-6
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.3390/f14010083
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1295/polymj.36.824, 长度: 21218 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1177/0731684407072516
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1116/1.576293, 长度: 55671 字符
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1002/app.27630
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.3176/proc.2018.2.08
+WARNING:domains.chembrain.server.utils:文献全文为空: 10.1002/app.45216
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pat.354, 长度: 16264 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/j.memsci.2015.01.048, 长度: 55762 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.10885, 长度: 18846 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.13312, 长度: 34882 字符
+INFO:root:全文可用性检查完成: 15 篇有全文, 33 篇无全文
+INFO:root:步骤4: 对 15 篇有全文的文献进行总结生成...
+INFO:tools.utils:开始并行处理 15 篇文献的总结（最大并行数: 20）
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.28145, 长度: 25041 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/s0141-3910(03)00092-2, 长度: 22716 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pat.1755, 长度: 26593 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1177/096739111402200205, 长度: 17914 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1007/s13233-016-4036-2, 长度: 21970 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/j.ssi.2016.04.004, 长度: 31035 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.30344, 长度: 31511 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1016/j.memsci.2015.01.048, 长度: 55762 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1295/polymj.36.824, 长度: 21218 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pat.354, 长度: 16264 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/pola.22782, 长度: 34953 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.10885, 长度: 18846 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1039/c2ee21996d, 长度: 57990 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1002/app.13312, 长度: 34882 字符
+INFO:domains.chembrain.server.utils:成功读取文献全文: 10.1116/1.576293, 长度: 55671 字符
+paper_doi:10.1177/0954008313512141
+paper_doi:10.1002/app.28145
+paper_doi:10.1016/s0141-3910(03)00092-2
+paper_doi:10.1016/j.compositesb.2012.04.055
+paper_doi:10.1002/pat.1755
+paper_doi:10.1177/0892705710369867
+paper_doi:10.1039/c1jm12166a
+paper_doi:10.1016/j.vacuum.2016.04.022
+paper_doi:10.1080/03602559.2013.828230
+paper_doi:10.4028/www.scientific.net/AMR.139-141.9
+paper_doi:10.1002/adma.201703992
+paper_doi:10.1177/096739111402200205
+paper_doi:10.1007/s13233-016-4036-2
+paper_doi:10.1177/0892705718805535
+paper_doi:10.1016/j.ssi.2016.04.004
+paper_doi:10.1166/jnn.2012.4518
+paper_doi:10.1002/app.30344
+paper_doi:10.1177/1528083720932337
+paper_doi:10.1016/j.memsci.2015.01.048
+paper_doi:10.1295/polymj.36.824
+paper_doi:10.1016/j.compositesa.2015.08.022
+paper_doi:10.1016/j.compscitech.2007.01.016
+paper_doi:10.1177/0021998310371551
+paper_doi:10.1016/j.sna.2021.112672
+paper_doi:10.1002/pat.354
+paper_doi:10.1177/096739110501300705
+paper_doi:10.1109/TDEI.2016.7736838
+paper_doi:10.1002/pc.22284
+paper_doi:10.1081/PPT-100000247
+paper_doi:10.1016/j.egypro.2017.07.022
+paper_doi:10.1002/pola.22782
+paper_doi:10.1016/j.ijadhadh.2008.05.001
+paper_doi:10.1007/s12221-015-0223-6
+paper_doi:10.3390/su13041788
+paper_doi:10.1177/0731684407072516
+paper_doi:10.1016/j.matdes.2011.02.059
+paper_doi:10.1002/app.10885
+paper_doi:10.1007/s12221-012-0769-5
+paper_doi:10.1155/2018/7914727
+paper_doi:10.1007/s002890050228
+paper_doi:10.1002/app.45216
+paper_doi:10.1039/c2ee21996d
+paper_doi:10.3176/proc.2018.2.08
+paper_doi:10.1002/app.13312
+paper_doi:10.1002/polb.24610
+paper_doi:10.1116/1.576293
+paper_doi:10.3390/f14010083
+paper_doi:10.1002/app.27630
+paper_doi:10.1002/app.28145
+paper_doi:10.1016/s0141-3910(03)00092-2
+paper_doi:10.1002/pat.1755
+paper_doi:10.1177/096739111402200205
+paper_doi:10.1007/s13233-016-4036-2
+paper_doi:10.1016/j.ssi.2016.04.004
+paper_doi:10.1002/app.30344
+paper_doi:10.1016/j.memsci.2015.01.048
+paper_doi:10.1295/polymj.36.824
+paper_doi:10.1002/pat.354
+paper_doi:10.1002/pola.22782
+paper_doi:10.1002/app.10885
+paper_doi:10.1039/c2ee21996d
+paper_doi:10.1002/app.13312
+paper_doi:10.1116/1.576293
+INFO:     101.201.40.38:41328 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:tools.utils:文献总结生成成功: 10.1002/pat.354, 耗时: 12.19s
+INFO:tools.utils:文献总结生成成功: 10.1177/096739111402200205, 耗时: 31.67s
+INFO:tools.utils:文献总结生成成功: 10.1016/s0141-3910(03)00092-2, 耗时: 38.75s
+INFO:tools.utils:文献总结生成成功: 10.1039/c2ee21996d, 耗时: 38.95s
+INFO:tools.utils:文献总结生成成功: 10.1002/app.30344, 耗时: 39.45s
+INFO:tools.utils:文献总结生成成功: 10.1002/app.10885, 耗时: 42.13s
+INFO:tools.utils:文献总结生成成功: 10.1016/j.ssi.2016.04.004, 耗时: 43.52s
+INFO:tools.utils:文献总结生成成功: 10.1002/pat.1755, 耗时: 45.22s
+INFO:tools.utils:文献总结生成成功: 10.1116/1.576293, 耗时: 45.41s
+INFO:tools.utils:文献总结生成成功: 10.1002/app.28145, 耗时: 45.45s
+INFO:tools.utils:文献总结生成成功: 10.1002/app.13312, 耗时: 45.64s
+INFO:tools.utils:文献总结生成成功: 10.1295/polymj.36.824, 耗时: 45.73s
+INFO:tools.utils:文献总结生成成功: 10.1007/s13233-016-4036-2, 耗时: 46.93s
+INFO:tools.utils:文献总结生成成功: 10.1016/j.memsci.2015.01.048, 耗时: 53.22s
+INFO:tools.utils:文献总结生成成功: 10.1002/pola.22782, 耗时: 55.71s
+INFO:tools.utils:完成 15 篇文献的总结生成
+INFO:root:查询完成，总耗时: 69.43s
+INFO:root:返回 15 个文献总结（来自 15 篇有全文的文献）
+INFO:root:跳过 33 篇无全文的文献（仅数据库查询结果）
+2025-12-01 09:31:49,881 - INFO - Job 2025-12-01-09:30:39.832868/b6aa7294-b509-4689-a4ef-4870d7e97a4f result is {'summaries': ['很遗憾，您提供的文献全文存在严重的编码错误和乱码，无法从中提取任何关于聚酰亚胺玻璃化转变温度的具体信息。\n\n从文本中只能识别出一些零散的词语片段，如"聚酰亚胺"、"玻璃化转变温度"等关键词，但所有具体的研究方法、实验数据、结果和结论等重要信息都因文本损坏而无法读取。\n\n**建议：**\n1. 请提供原始的可读文献文件（PDF或标准文本格式）\n2. 或者提供文献的标题、作者、DOI等基本信息，以便查找相关摘要\n3. 如果这是从某个数据库导出的文件，建议重新导出或直接从原文复制文本内容\n\n一旦获得可读的文献内容，我将能够为您生成关于玻璃化转变温度低于400°C的聚酰亚胺研究的详细总结。', '**文献总结**  \n**标题：** The Effects of Particle Size on the Morphology and Properties of Polyimide/nano-Al2O3 Composite Films  \n**来源：** Polymers & Polymer Composites, Vol. 22, No. 2, 2014  \n\n**1. 研究背景与目的**  \n聚酰亚胺（PI）因其优异的机械性能、热稳定性和电绝缘性，广泛应用于微电子和航空航天领域。本研究旨在探讨不同粒径（30 nm、50 nm、100 nm）的纳米Al2O3颗粒对PI复合材料微观结构和性能的影响，特别是对机械性能、电击穿强度、介电性能和耐电晕性能的作用。\n\n**2. 研究方法**  \n- **材料制备：** 以PMDA和ODA为单体，通过原位聚合法制备PI/nano-Al2O3复合薄膜，其中Al2O3颗粒作为增强材料，含量未明确说明。  \n- **实验条件：** 复合薄膜经过阶梯升温处理（最高350°C，持续2小时），最终厚度为30±2 μm。  \n- **表征手段：** 使用SEM观察微观结构，测试拉伸强度、断裂伸长率、电击穿强度、介电常数和耐电晕时间。\n\n**3. 主要发现**  \n- **微观结构：** 30 nm Al2O3颗粒在PI基体中分散均匀，界面结合良好；随着粒径增大（50 nm、100 nm），出现颗粒团聚和相分离现象。  \n- **机械性能：** 拉伸强度随Al2O3粒径增大而降低（30 nm: 132.18 MPa；50 nm: 121.08 MPa；100 nm: 111.06 MPa）。断裂伸长率在50 nm时略有增加，但在100 nm时显著下降至13.42%。  \n- **电性能：**  \n  - 电击穿强度随粒径增大而降低（30 nm: 216.46 MV/m；50 nm: 190.44 MV/m；100 nm: 184.03 MV/m）。  \n  - 介电常数和介电损耗受粒径影响较小，基本保持稳定。  \n  - 耐电晕性能显著改善：30 nm Al2O3复合薄膜的耐电晕时间达99分钟，是纯PI薄膜（18分钟）的5.5倍；100 nm复合薄膜的耐电晕时间仅为30 nm薄膜的三分之一。\n\n**4. 结论**  \nAl2O3颗粒尺寸对PI复合薄膜的性能具有重要影响。较小粒径（30 nm）的Al2O3能够均匀分散，显著提升机械性能、电击穿强度和耐电晕性能；而较大粒径（100 nm）会导致颗粒团聚，破坏分子结构完整性，降低综合性能。\n\n**备注：** 文献中未明确提及聚酰亚胺基体的玻璃化转变温度（Tg），因此无法直接回应用户关于Tg低于400°C的问题。研究重点为纳米Al2O3填充对PI性能的调控，而非基体Tg的优化。', '**文献总结：甲基取代对6FDA基共聚酰亚胺热性能影响的研究**\n\n**文献信息**  \n标题：Effect of methyl group substitution in the diamine and copolymer composition on thermal degradation of copolyimides based on 2,2-bis(3,4-dicarboxyphenyl) hexafluoropropane dianhydride  \n作者：P. Santhana Gopala Krishnan, S. Veeramani  \n期刊：Polymer Degradation and Stability, 81 (2003) 225–232  \nDOI：10.1016/S0141-3910(03)00092-2  \n\n---\n\n**1. 研究背景与目的**  \n本研究旨在探讨二胺单体中甲基取代基及共聚物组成对基于6FDA（2,2-双(3,4-二羧基苯基)六氟丙烷二酐）的共聚酰亚胺热性能的影响。通过合成三种不同二胺组合的共聚酰亚胺系列，系统评估其玻璃化转变温度（Tg）和热稳定性。\n\n**2. 研究方法**  \n- **合成方法**：以6FDA为二酐，与不同摩尔比的二胺（包括无甲基的mPDA、单甲基的DAT和三甲基的TMemPDA）在N-甲基-2-吡咯烷酮（NMP）中通过两步法合成共聚酰亚胺（先形成聚酰胺酸，再化学亚胺化）。  \n- **表征技术**：采用特性粘度、GPC、DSC、XRD和TGA对聚合物进行表征。Tg通过DSC测定（升温速率10°C/min，温度范围100–400°C）。\n\n**3. 主要发现**  \n- **玻璃化转变温度（Tg）**：  \n  - 在[6FDA + TMemPDA + mPDA]和[6FDA + TMemPDA + DAT]系列中，Tg随TMemPDA含量增加而升高（例如：从323°C升至364°C）。  \n  - 在[6FDA + mPDA + DAT]系列中，Tg随DAT含量增加而升高（例如：从308°C升至327°C）。  \n  - 所有共聚酰亚胺的Tg均**低于400°C**，具体范围在308–364°C之间（详见表1数据）。  \n  - 作者指出，TMemPDA中三个甲基的空间位阻效应限制了苯环旋转，导致Tg升高。\n\n- **热稳定性**：  \n  - TGA显示，在空气和氮气中，5%重量损失温度分别高于450°C和500°C。  \n  - 热降解动力学符合一级反应模型，活化能（Ea）随TMemPDA或DAT含量增加而降低，归因于甲基的给电子效应提高了二胺区域的电子密度，使其更易氧化。  \n  - 所有共聚酰亚胺均为无定形结构（XRD证实）。\n\n**4. 结论**  \n本研究成功合成了多种6FDA基共聚酰亚胺，其Tg均低于400°C，且可通过调节二胺中甲基取代基的类型和含量进行调控。增加TMemPDA（三甲基）或DAT（单甲基）比例可提高Tg，但会略微降低热降解活化能。这些发现为设计具有特定Tg的聚酰亚胺材料提供了重要参考，尤其适用于气体分离膜等需要适中热稳定性的应用。\n\n---  \n**注**：总结基于文献中明确报告的数据，重点关注Tg低于400°C的共聚酰亚胺体系。', '**文献总结**  \n**标题：** Zeolitic imidazolate framework (ZIF-8) based polymer nanocomposite membranes for gas separation  \n**DOI:** 10.1039/c2ee21996d  \n\n**1. 研究背景与目的**  \n本研究旨在开发高性能混合基质膜（MMM），用于气体分离（如H₂、CO₂、O₂、N₂、CH₄），重点解决聚合物与填料间的界面相容性问题。研究以**Matrimid® 5218聚酰亚胺**为聚合物基质，ZIF-8纳米颗粒为填料，通过溶液混合法制备纳米复合膜，并系统研究其结构与气体传输性能。\n\n**2. 关键实验方法与条件**  \n- **材料：** 使用商业聚酰亚胺Matrimid® 5218作为基质，其玻璃化转变温度（*T*g）通过动态机械热分析（DMA）测定。  \n- **膜制备：** 将合成的ZIF-8纳米颗粒（粒径≈60 nm）直接分散于氯仿中，与聚合物溶液混合，浇铸成膜后在60–300°C范围内真空退火18小时。  \n- **表征技术：** 采用SEM、XRD、FTIR、气体吸附及PALS分析膜的形貌、结构和自由体积。  \n- **气体渗透测试：** 在22°C、4 bar条件下测试纯气体渗透性，采用时间滞后法计算扩散系数与溶解度。\n\n**3. 主要发现与数据**  \n- **玻璃化转变温度（*T*g）：**  \n  - 纯Matrimid®膜的*T*g为**330°C**。  \n  - 添加ZIF-8后，*T*g随填料负载量增加而升高：  \n    - 5 wt% ZIF-8 → *T*g = 336°C  \n    - 10 wt% → 346°C  \n  - 20 wt% → 343°C  \n  - 30 wt% → **349°C**（见表1）。  \n  - 退火温度影响*T*g，在230°C退火后*T*g稳定在343–349°C范围内。  \n- **气体渗透性：**  \n  - ZIF-8的加入显著提高了气体渗透性（如H₂和CO₂渗透性在30 wt%负载时增至纯膜的3倍），但选择性基本保持不变（如CO₂/CH₄选择性维持在24.9–39.1）。  \n- **自由体积分析：** PALS结果表明，ZIF-8的引入增大了聚合物的自由体积孔径（从1.95 Å增至2.53 Å），同时气体可经ZIF-8笼状结构自由扩散，共同导致渗透性提升。\n\n**4. 结论**  \n本研究成功制备了ZIF-8/Matrimid®纳米复合膜，实现了填料的高分散性和界面相容性。**Matrimid®的*T*g均高于330°C**，且随ZIF-8负载量增加而进一步升高（最高达349°C）。因此，该文献中研究的聚酰亚胺**不满足玻璃化转变温度低于400°C的要求**。\n\n---\n**注：** 本文献重点关注ZIF-8/聚酰亚胺复合膜的气体分离性能，未涉及*T*g低于400°C的聚酰亚胺材料。', '**文献总结**  \n**标题**: Thermomechanical Characteristics of Benzoxazine–Urethane Copolymers and Their Carbon Fiber-Reinforced Composites  \n**DOI**: 10.1002/app.30344  \n\n**研究背景与目的**  \n本研究开发了聚苯并噁嗪（BA-a）与聚氨酯弹性体（PU）的共聚物，旨在通过共聚改善聚苯并噁嗪的韧性，并评估不同异氰酸酯类型（TDI、MDI、IPDI）对共聚物性能的影响。共聚物进一步用作碳纤维复合材料的基体。\n\n**关键方法与实验条件**  \n- **共聚物制备**：BA-a与PU预聚体（基于TDI、MDI或IPDI）以不同质量比（如60:40、70:30等）混合，在80°C下熔融共混，并通过阶梯固化（150°C、170°C、190°C各1小时，200°C 2小时）形成共聚物。  \n- **表征技术**：采用差示扫描量热法（DSC）、动态机械分析（DMA）和热重分析（TGA）评估热机械性能。\n\n**主要发现与数据**  \n1. **玻璃化转变温度（Tg）**：  \n   - 纯BA-a的Tg为165°C，纯PU的Tg约为–70°C。  \n   - **共聚物Tg显著提高**：在所有异氰酸酯类型中，BA-a/PU共聚物的Tg均高于纯树脂。例如，在60:40 BA-a:PU体系中，所有共聚物的Tg均**超过230°C**，其中基于TDI的共聚物Tg最高。Tg随PU质量分数增加而上升（最高至40 wt%），归因于异氰酸酯与聚苯并噁嗪羟基反应增加交联密度。  \n   - 不同异氰酸酯的影响：TDI基共聚物Tg > MDI基 ≈ IPDI基。\n\n2. **热稳定性**：  \n   - 降解温度（Td，5%重量损失）从纯BA-a的321°C略微增加至共聚物的约330°C。\n\n3. **机械性能**：  \n   - **弯曲强度**：在BA-a:PU比例为90:10时，所有体系均显示协同效应（最大值）。TDI基共聚物在弯曲模量和强度上表现最佳。  \n   - **碳纤维复合材料**：基于TDI的BA-a:PU（60:40）复合材料在80 wt%纤维含量下弯曲强度达490 MPa，弯曲模量略降至48 GPa（纯BA-a为51 GPa）。\n\n**结论**  \nBA-a/PU共聚物通过引入PU有效提高了Tg（所有体系Tg > 230°C）和韧性，同时保持高热稳定性。TDI基共聚物综合性能最优，适用于高性能碳纤维复合材料。共聚物的高Tg和增强的机械性能使其在需要低温加工（固化温度≤200°C）且高耐热的应用中具有潜力。\n\n**注**：本文献未直接研究聚酰亚胺，但共聚物的Tg均低于400°C（实测最高Tg > 230°C），与用户问题中“玻璃化转变温度低于400°C”的要求相符。', "**文献总结：聚(甲基三氟丙基硅氧烷-b-酰亚胺)共聚物的制备与性能**\n\n**标题**：Preparation and Properties of Poly(methyltrifluoropropylsiloxane-b-imide) Copolymer. I  \n**DOI**：10.1002/app.10885  \n**作者**：Doo Whan Kang, Young Min Kim  \n**期刊**：Journal of Applied Polymer Science, Vol. 85, 2867–2874 (2002)\n\n---\n\n**研究背景**  \n聚酰亚胺以其优异的热稳定性和机械强度著称，但传统聚酰亚胺通常具有高玻璃化转变温度（Tg），限制了其加工性。本研究旨在通过引入柔性聚硅氧烷链段来降低聚酰亚胺的Tg，改善其性能。\n\n**研究方法**  \n1. **共聚物合成**：通过热酰亚胺化反应制备聚(甲基三氟丙基硅氧烷-嵌段-酰亚胺)共聚物（PSBPI）。使用3,3',4,4'-二苯甲酮四羧酸二酐（BTDA）、4,4'-二氨基二苯醚（ODA）以及α,ω-氨丙基封端的聚(甲基三氟丙基硅氧烷)预聚物（APMFS）作为原料。APMFS含量在二胺总量中从0变化至30 wt%。\n\n2. **表征技术**：采用FTIR和NMR确认结构；通过热重分析（TGA）、热机械分析（TMA）、动态机械分析（DMA）和拉伸测试评估热学与机械性能；利用SEM和AFM分析表面形貌。\n\n**主要发现**  \n1. **玻璃化转变温度（Tg）**：  \n   - 随着APMFS含量增加，共聚物的Tg显著降低。  \n   - 具体数据：APMFS含量为10 wt%时，Tg为271°C；20 wt%时为254°C；30 wt%时降至184°C。  \n   - DMA结果进一步证实了微相分离，显示出对应于APMFS软段（约-80°C）和BTDA-ODA硬段的两个Tg。\n\n2. **热性能**：  \n   - TGA显示初始热降解温度（Td）随APMFS含量增加而降低，归因于APMFS中丙基基团的热不稳定性。\n\n3. **机械与热膨胀性能**：  \n   - 拉伸强度随APMFS含量增加而下降。  \n   - 线性热膨胀系数（CTE）从161 μm/m°C（10 wt% APMFS）降至59 μm/m°C（30 wt% APMFS），可能与APMFS链段交联有关。\n\n4. **表面性能**：  \n   - SEM和AFM显示，APMFS含量影响表面形貌和粗糙度（Ra）。低含量（10 wt%）时表面粗糙（Ra=0.68 μm），高含量（30 wt%）时形成平滑连续相。\n\n**结论**  \n本研究成功合成了含有不同APMFS含量的聚酰亚胺嵌段共聚物。APMFS的引入有效降低了共聚物的Tg，最低达到184°C（APMFS含量30 wt%），同时改善了热膨胀性和表面特性。这些发现表明，通过调控APMFS含量，可以设计出Tg低于400°C的聚酰亚胺材料，适用于需要较低加工温度和高性能的应用领域。\n\n---  \n**总结**：该文献报道的聚酰亚胺嵌段共聚物通过引入聚硅氧烷链段，显著降低了玻璃化转变温度，最低为184°C，完全满足用户对Tg低于400°C的需求。", '**文献总结：基于磺化聚芳醚酮/聚乳酸嵌段共聚物的多孔质子交换膜**\n\n**标题：** Porous proton exchange membranes based on sulfonated poly(arylene ether ketone)/polylactide block copolymers for enhanced proton conductivity and dimensional stability  \n**DOI：** http://dx.doi.org/10.1016/j.ssi.2016.04.004  \n\n**文献相关性说明：** 本文献研究了磺化聚芳醚酮（SPAEK）基多孔质子交换膜，但全文未提及聚酰亚胺（polyimide）或玻璃化转变温度（Tg）数据。因此，该文献内容与用户查询“玻璃化转变温度低于400°C的聚酰亚胺”无直接关联。以下总结基于文献实际内容，聚焦于SPAEK基多孔膜的制备与性能。\n\n**研究方法与实验条件：**  \n1. **材料合成：** 通过亲核芳香取代反应合成羟基封端的磺化聚芳醚酮（SPAEK-OH），磺化度（DS）控制在40%、60%和80%。  \n2. **嵌段共聚物制备：** 以SPAEK-OH为引发剂，通过L-丙交酯的开环聚合制备SPAEK/PLA二嵌段共聚物，通过调节L-丙交酯投料量（5%、15%、50%重量比）控制PLA含量。  \n3. **多孔膜制备：** 采用溶剂浇铸法成膜，随后通过NaOH溶液选择性去除PLA相，形成多孔结构。  \n4. **孔结构调控：** 通过改变PLA含量，成功制备平均孔径为50 nm至2.6 μm的多孔膜。  \n5. **表征手段：** 包括核磁共振（NMR）、傅里叶变换红外光谱（FTIR）、扫描电子显微镜（SEM）、汞孔隙度测定法、热重分析（TGA）、拉伸测试、吸水率、尺寸溶胀、质子电导率和甲醇渗透性测试。\n\n**主要发现与数据：**  \n1. **质子电导率：**  \n   - 多孔膜的质子电导率显著高于无孔膜（相同DS下）。  \n   - 质子电导率随孔径增大而降低：最小孔径（50 nm）的膜（如SP-LA (80,5)）在70°C时电导率达0.129 S cm⁻¹，与Nafion 117相当。  \n   - 温度升高（至80°C）进一步提升了多孔膜的电导率。  \n\n2. **甲醇渗透性：**  \n   - 多孔膜的甲醇渗透性高于无孔膜，但所有SPAEK膜（包括多孔）均远低于Nafion 117。  \n   - 最小孔径（50 nm）膜表现出最低的甲醇渗透性。\n\n3. **吸水率与尺寸稳定性：**  \n   - 多孔膜吸水率显著高于无孔膜，但尺寸溶胀（长度和厚度变化）相对较小，归因于SPAEK基体聚合物刚性的主链结构提供了机械强度。  \n\n4. **热稳定性：**  \n   - TGA显示膜在180–300°C出现第一次重量损失（归因于-SO₃H基团分解）；主链降解起始于约380°C。孔径对热降解行为影响不显著。  \n\n5. **机械性能：**  \n   - 多孔膜的拉伸强度略低于无孔膜，且随孔径增大而降低；断裂伸长率低于Nafion 117。\n\n**结论：**  \n本研究成功开发了基于SPAEK/PLA嵌段共聚物的多孔质子交换膜，通过调控孔径（50 nm–2.6 μm）和磺化度（40–80%），实现了高质子电导率和良好尺寸稳定性的平衡。最小孔径（50 nm）膜综合性能最优，包括最高电导率和最低甲醇渗透性。尽管文献未涉及聚酰亚胺或玻璃化转变温度，但其多孔膜制备策略对高性能聚合物电解质膜设计具有参考价值。', "**文献总结：玻璃化转变温度低于400°C的聚酰亚胺复合材料研究**\n\n**标题：** Novel fiber reinforced bismaleimide/diallyl bisphenol A/microcapsules composites  \n**DOI：** 10.1002/pat.1755  \n\n**研究背景与目的：**  \n本研究旨在开发新型纤维增强双马来酰亚胺（BMI）/O,O'-二烯丙基双酚A（BA）/环氧树脂微胶囊（MCEs）复合材料，重点考察MCEs对复合材料力学性能、湿热耐受性及动态力学性能的影响。BMI树脂因其优异的热稳定性广泛应用于航空航天领域，但通常具有较高的玻璃化转变温度（Tg）。本研究通过改性BMI/BA体系，关注其Tg值。\n\n**研究方法与实验条件：**  \n- **材料：** 采用BMI与BA（重量比1:1）预聚物作为基体，添加三种不同直径（200 μm、140 μm、86 μm）的聚脲甲醛（PUF）微胶囊填充环氧树脂（MCEs），并以E-玻璃布作为增强纤维（纤维体积分数约40%）。  \n- **制备工艺：** 复合材料通过热压成型，固化温度循环为120°C/1 h + 150°C/1 h + 180°C/2 h + 200°C/2 h。  \n- **表征方法：** 使用扫描电子显微镜（SEM）和光学显微镜（OM）观察形貌；通过动态力学分析（DMA）和差示扫描量热法（DSC）测定Tg；力学性能（弯曲强度、层间剪切强度、冲击强度）和湿热耐受性（100°C沸水处理100 h）按中国标准测试。\n\n**主要发现与数据：**  \n- **玻璃化转变温度（Tg）：** DMA和DSC分析显示，所有纤维增强BMI/BA/MCEs复合材料的Tg值约为215°C（例如，图11和12中tan δ峰值温度）。MCEs的添加（含量最高至20 wt%）对Tg无显著影响，主要归因于复合材料固化温度不超过200°C，导致固化度较低，且BMI/BA树脂与MCEs在相同固化条件下Tg相近，导致tan δ曲线重叠为单一宽峰。  \n- **力学性能：** 适量MCEs（如2-10 wt%）可显著提高弯曲强度（最高增加13.8%）、层间剪切强度（最高增加15.1%）和冲击强度（最高增加25%），但过高含量（如>10 wt%）会因MCEs团聚和界面粘附减弱而降低性能。  \n- **湿热耐受性：** MCEs的适当添加能降低复合材料在沸水中的吸湿率，并提高力学性能保留率。  \n- **形貌分析：** MCEs嵌入树脂富集区，能抑制裂纹扩展，但过量会导致纤维-基体界面缺陷。\n\n**结论：**  \n本研究成功开发了纤维增强BMI/BA/MCEs复合材料，其中MCEs的添加在优化含量下可改善力学性能和湿热耐受性，但对Tg无显著影响。复合材料的Tg约为215°C，远低于400°C，这主要受限于固化工艺温度（≤200°C），而非MCEs的直接作用。该体系适用于对Tg要求不极端严苛但需综合性能提升的应用场景。\n\n**总结说明：**  \n本文献直接报告了BMI/BA基复合材料的Tg值为215°C，满足用户对Tg低于400°C的查询需求。研究重点在于MCEs对性能的改性，Tg结果源于实验条件而非材料本征设计。", '**文献总结：铜与聚酰亚胺的化学和物理相互作用研究**\n\n**标题**: A study of the chemical and physical interaction between copper and polyimide  \n**DOI**: 10.1116/1.576293  \n\n**研究背景与目的**  \n本研究旨在探讨基于均苯四甲酸二酐-氧二苯胺(PMDA-ODA)的聚酰胺酸前驱体在不同固化条件下与铜的相互作用，重点关注氧气水平对反应速率和材料性能的影响。\n\n**研究方法**  \n- **材料体系**: 使用PMDA-ODA型聚酰胺酸前驱体（杜邦公司商业产品），稀释在N-甲基吡咯烷酮溶剂中。  \n- **固化条件**: 在85°C、150°C、230°C、300°C（各30分钟）和350°C（1小时）的多阶段热固化过程中，系统改变固化环境中的氧气分压，包括空气（21% O₂）、1% O₂-N₂、0.3% O₂-N₂、真空和形成气体（10% H₂-N₂）等不同气氛。  \n- **分析技术**: 采用傅里叶变换红外光谱(FTIR)、X射线光电子能谱/俄歇电子能谱(ESCA/AES)、横截面透射电子显微镜(TEM)、铜片电阻测量和平行板电容测量等多种方法表征界面结构和材料性能。\n\n**主要发现**  \n1. **氧气依赖性的相互作用**: 在固化过程中，铜-聚酰胺酸界面上发生两种主要反应：(1)铜与聚酰胺酸的相互作用；(2)铜的氧化。这两种反应的速率均受氧气水平和氧气供应到界面的控制。\n\n2. **聚酰亚胺降解与性能劣化**: 在高氧环境（特别是氧气含量≥1%）下固化，尤其是薄涂层（如1.4 µm），会导致聚酰亚胺严重降解并在下方形成氧化铜膜。这导致：\n   - 聚酰亚胺薄膜介电常数升高\n   - 介电击穿强度降低\n- 金属-金属界面接触电阻增高\n- 聚酰亚胺与底层铜的粘附性下降\n\n3. **临界厚度效应**: 存在临界聚酰亚胺厚度，低于此厚度时铜氧化和铜-聚酰亚胺相互作用会导致完全降解的薄膜。\n\n3. **抑制策略的有效性**:  \n   - **降低氧气含量**: 在低氧环境（如0.3% O₂、真空或形成气体）中固化，可以显著抑制这两种降解机制，获得具有低介电常数、高介电击穿强度和高电导率铜的良好聚酰亚胺薄膜。\n   - **铬钝化层**: 在铜表面覆盖连续的铬薄膜（200-500 Å）可以有效抑制铜与聚酰亚胺的相互作用，即使在不利的高氧固化条件下也能保持良好质量的聚酰亚胺和铜薄膜。\n\n**结论**  \n铜-聚酰胺酸体系可被视为电化学腐蚀电池，铜氧化可能是铜-聚酰胺酸反应的先导。反应速率和降解程度取决于氧气水平以及氧气供应到界面的情况，这由聚合物涂层的厚度和固化环境中的氧气分压共同控制。通过最小化固化环境中的氧气含量或使用还原性气氛，或者采用铬等钝化金属，可以抑制这些反应，从而在铜表面上获得保持良好的低介电常数、高介电击穿强度和高电导率的聚酰亚胺薄膜。\n\n**备注**: 本文献主要研究铜与聚酰亚胺界面的相互作用及其对材料性能的影响，但未明确提及所研究聚酰亚胺的具体玻璃化转变温度数据。', "**文献总结**  \n**标题：** 6FDA-TAPOB Hyperbranched Polyimide-Silica Hybrids for Gas Separation Membranes  \n**DOI：** 10.1002/app.28145  \n\n**研究背景与目的**  \n本研究旨在开发具有优异气体分离性能的聚酰亚胺-二氧化硅杂化膜，重点关注其物理和气体传输特性。研究采用超支化聚酰亚胺（HBPI）与二氧化硅杂化，以提升材料的热稳定性和气体分离能力。\n\n**研究方法与实验条件**  \n- **材料合成：** 通过三胺1,3,5-三(4-氨基苯氧基)苯（TAPOB）和二酐4,4'-(六氟异亚丙基)二邻苯二甲酸酐（6FDA）的缩聚反应制备超支化聚酰胺酸前体，并利用3-氨丙基三甲氧基硅烷（APTrMOS）修饰部分端基。  \n- **杂化膜制备：** 采用溶胶-凝胶法，以四甲氧基硅烷（TMOS）和/或甲基三甲氧基硅烷（MTMS）作为硅源，在热酰亚胺化条件下（100°C、200°C、300°C各1小时）成膜。  \n- **表征与测试：** 使用热机械分析（TMA）测定玻璃化转变温度（Tg），热重分析（TGA）评估热稳定性，并通过气体渗透装置在25°C和76 cmHg条件下测量CO₂、O₂、N₂和CH₄的渗透性。\n\n**主要发现与数据**  \n- **玻璃化转变温度（Tg）：** 纯6FDA-TAPOB HBPI的Tg为282°C。在MTMS体系中，低二氧化硅含量区域（如10 wt% SiO₂）的Tg出现最小值（278°C），表明MTMS的甲基基团阻碍了三维Si–O–Si网络的形成，导致分子链约束减少。TMOS体系的Tg随二氧化硅含量增加而显著升高（如30 wt% SiO₂时达318°C），而TMOS/MTMS复合体系的Tg介于两者之间（如30 wt% SiO₂时为301°C）。所有测定的Tg值均低于400°C，符合用户问题要求。  \n- **热稳定性：** 杂化膜的5%失重温度（Td₅）随二氧化硅含量增加而提高，纯HBPI为457°C，TMOS体系（30 wt% SiO₂）升至509°C。  \n- **气体渗透性：** CO₂、O₂、N₂和CH₄的渗透系数均随二氧化硅含量增加而上升。例如，在MTMS体系中，CO₂渗透系数从纯HBPI的7.4 × 10⁻¹⁰ cm³(STP)cm/cm² s cmHg增至251 × 10⁻¹⁰（50 wt% SiO₂）。TMOS/MTMS复合体系在保持高CO₂/CH₄选择性的同时，显著提高了CO₂渗透性。  \n- **自由体积效应：** MTMS和TMOS/MTMS体系的气体扩散系数大幅提升，归因于松散的Si–O–Si网络增加了自由体积空穴的尺寸和数量。\n\n**结论**  \n6FDA-TAPOB超支化聚酰亚胺-二氧化硅杂化膜展现出高热稳定性和优异的气体分离性能，尤其在CO₂/CH₄分离方面具有潜力。MTMS的引入降低了Tg并增强了气体渗透性，而TMOS/MTMS复合体系实现了CO₂渗透性和选择性的同步提升。所有杂化膜的Tg均低于400°C，适用于中高温气体分离应用。", '**文献总结：聚酰胺酰亚胺-聚二甲基硅氧烷纳米复合材料的性能研究**\n\n**标题：** Mechanical, Surface, and Thermal Properties of Polyamideimide–Polydimethylsiloxane Nanocomposites Fabricated by Sol–Gel Process  \n**来源：** Journal of Applied Polymer Science, Vol. 91, 1774–1783 (2004)\n\n**研究背景与目的**  \n本研究旨在通过溶胶-凝胶法制备聚酰胺酰亚胺（PAI）与聚二甲基硅氧烷（PDMS）的纳米复合材料，旨在提高PAI的韧性并改善其表面性能，同时探索其热稳定性。用户关注的是玻璃化转变温度（Tg）低于400°C的聚酰亚胺相关材料，本文虽未直接提供PAI的Tg值，但通过DSC分析提供了相关热性能信息。\n\n**研究方法与实验条件**  \n- **材料合成：** 使用PAI与环氧硅烷（偶联剂）反应，再通过溶胶-凝胶过程与低聚PDMS（由二官能硅烷缩合而成）复合，最终在80°C下真空干燥成膜。  \n- **表征技术：** 采用FTIR确认化学结构，XPS分析表面元素分布，TGA和DGA评估热稳定性，DSC测量玻璃化转变温度。实验在氮气和氧气气氛下进行，加热速率分别为20°C/min（TGA）和10°C/min（DSC）。\n\n**主要发现与数据**  \n1. **热性能（TGA）：**  \n   - 在氮气气氛中，纯PAI在300°C以下因缩合反应出现重量损失，而PDMS添加的PAI在400°C开始热解，比纯PAI（450°C以上）低50°C，表明PDMS的加入略微降低了初始热稳定性。  \n   - 在约700°C的氧气气氛中，PAI-PDMS复合材料显示出显著增加的残炭浓度（高达45%，而纯PAI为0%），这归因于硅酸盐陶瓷的形成。  \n   - 残炭的增加可能提升材料的阻燃性和耐氧化性。\n\n2. **玻璃化转变温度（DSC）：**  \n   - DSC曲线显示，PAI的Tg未清晰出现，且PDMS的添加未明显影响PAI的Tg。文中提到，PDMS的Tg预计在约-100°C，但未在测量范围内（30–250°C）观察到。因此，PAI的Tg可能高于250°C，但具体值未明确测定，无法确认是否低于400°C。\n\n3. **机械与表面性能：**  \n   - 添加30 wt% PDMS到含30 wt%环氧硅烷的PAI中，最大伸长率和韧性显著提高（例如，韧性从9.50 MPa增至21.15 MPa），但拉伸强度略有下降。  \n   - XPS证实硅氧烷基团在表面富集，这可能改善水阻性、粘附性和耐磨性。\n\n**结论**  \n本研究通过溶胶-凝胶法成功制备了PAI-PDMS纳米复合材料，显著提高了韧性和表面性能，但热稳定性在初始阶段略有降低。尽管DSC未提供明确的Tg数据，但结果表明PAI的Tg可能未受PDMS添加的显著影响，且热解起始温度（400°C）低于纯PAI，但玻璃化转变温度本身未在文中明确报告。该方法为低温硫化提供了潜在解决方案，适用于电子和航空航天领域。\n\n**DOI信息：** 未在全文提供，但文献发表于Journal of Applied Polymer Science, 2004年。', '**文献总结：含羧基侧链聚酰亚胺复合材料的合成与力学性能**\n\n**标题：** Synthesis of High-performance Composites of Poly(4-vinylpyridine-co-styrene) Copolymer (P4VPy–St) and Polyimides (PI) Having Carboxyl Pendant Groups by in-situ Polymerization and Their Mechanical Properties  \n**DOI：** 10.1295/polymj.36.824\n\n**研究背景与目的**  \n本研究旨在通过原位聚合法制备聚(4-乙烯基吡啶-共-苯乙烯)(P4VPy–St)与含羧基侧链的聚酰亚胺(PI)的高性能复合材料。重点考察羧基含量对复合材料力学性能的影响，特别是通过氢键相互作用提高两组分间的相容性和拉伸强度。\n\n**研究方法**  \n1. **聚合物合成**：  \n   - **P4VPy–St共聚物**：通过苯乙烯与4-乙烯基吡啶的自由基共聚制备，组成比为4-VPy:St = 5:5。  \n   - **含羧基的聚酰亚胺(PI)**：以均苯四甲酸二酐(PMDA)为二酐单体，间苯二胺(MPDA)和3,5-二氨基苯甲酸(DABA)为二胺单体，通过调节DABA/MPDA的投料比（0-100 mol%）控制羧基含量。先合成聚酰胺酸(PAA)，再经阶梯热处理（120°C 1h, 180°C 1h, 220°C 2h，真空）进行酰亚胺化得到PI。\n\n2. **复合材料制备**：  \n   - **原位聚合法**：在P4VPy–St的DMAc溶液中原位聚合PAA，然后成膜并酰亚胺化。  \n   - **共混法**：分别合成P4VPy–St和PAA，然后在溶液中混合并成膜。\n\n3. **表征与测试**：  \n   - **力学性能**：通过拉伸试验测量拉伸强度、模量和断裂伸长率。  \n   - **热性能**：通过热重分析(TG)评估热分解行为。  \n   - **形貌分析**：使用扫描电子显微镜(SEM)观察断面形貌。  \n   - **结构分析**：采用FT-IR确认酰亚胺化和氢键形成。\n\n**主要发现**  \n1. **羧基含量对力学性能的影响**：  \n   - 随着PI中羧基含量（DABA投料比）的增加，复合材料的拉伸强度显著提高。例如，对于P4VPy–St/PI复合材料（50 wt% PI），当羧基含量从0 mol%增至100 mol%时：  \n     - 原位聚合法制备的样品拉伸强度从48.9 MPa增至70.1 MPa。  \n   - 拉伸模量和断裂伸长率也随羧基含量增加而提升。\n\n2. **氢键相互作用的关键作用**：  \n   - P4VPy–St中的吡啶基团与PI中的羧基之间形成氢键，显著增强了两种聚合物之间的相容性，从而提高了力学性能。\n\n3. **制备方法的影响**：  \n   - 原位聚合法制备的复合材料在所有羧基含量下均显示出比共混法更高的拉伸强度，表明原位聚合能实现更均匀的分子级分散。\n\n4. **热性能**：  \n   - 引入羧基侧链降低了复合材料的热分解温度，因为羧基的存在促进了热分解。\n\n5. **形貌观察**：  \n   - SEM显示，含羧基的PI复合材料断面更均匀，球形颗粒尺寸小于1 μm，表明相容性改善。\n\n**结论**  \n本研究成功通过原位聚合法制备了P4VPy–St与含羧基侧链PI的高性能复合材料。羧基含量的增加通过氢键相互作用有效提高了复合材料的相容性和拉伸强度。原位聚合方法相比传统共混法在提升力学性能方面更具优势。这项工作证明，在基体聚合物和增强聚合物之间引入吸引性相互作用（如氢键）并结合原位聚合策略，是制备高性能聚合物复合材料的有效途径。\n\n**注**：文献中未明确报告所研究聚酰亚胺的玻璃化转变温度(Tg)，因此无法直接确认其是否低于400°C。研究焦点在于羧基含量对力学性能和相容性的影响。', '**文献总结：垂直排列液晶用两亲性嵌段共聚物原位自组装层的研究**\n\n**标题**：Vertical Alignment of Liquid Crystals Using an In Situ Self-Assembled Layer of an Amphiphilic Block Copolymer  \n**DOI**：10.1007/s13233-016-4036-2  \n\n**背景与目的**  \n本研究旨在开发一种替代传统聚酰亚胺（polyimide）垂直排列层的方法，用于液晶（LC）的垂直排列。传统聚酰亚胺层形成过程复杂、耗时且降低器件透光率。为此，作者提出使用一种两亲性嵌段共聚物（聚乙烯-嵌段-聚乙二醇，PE-b-PEG）通过原位自组装形成排列层，简化工艺并降低成本。\n\n**研究方法**  \n- **材料**：使用PE-b-PEG嵌段共聚物（PEG含量20%和50%），将其掺杂到负性液晶（Δε=-3.1, Δn=0.095）中，浓度分别为0.05 wt%和0.1 wt%。  \n- **实验条件**：将共聚物与液晶在向列-各向同性转变温度（75°C）下混合，注入到无额外排列层的ITO玻璃基板液晶盒中（间隙5.25 μm）。液晶盒在120°C下退火1小时，然后缓慢冷却至室温，促进共聚物在ITO基板上自组装。  \n- **表征方法**：通过偏光显微镜（POM）观察液晶排列均匀性；接触角测量分析自组装层形成；电光特性测试（电压-透射率曲线和阈值电压）评估性能。\n\n**主要发现**  \n1. **排列效果**：  \n   - PEG含量50%、浓度0.05 wt%的样品显示出最均匀的垂直排列（POM图像呈暗态），而PEG含量20%或高浓度（0.1 wt%）样品出现随机纹理，排列不均匀。  \n   - 高PEG含量（50%）提供足够的锚定力，使共聚物稳定附着在亲水性ITO基板上，而低浓度减少共聚物聚集，优化排列。  \n\n2. **自组装层验证**：接触角测量显示，自组装层的水接触角（70°–80°）高于裸ITO基板（57.5°），证实疏水性PE链在基板表面形成有序层。  \n\n3. **电光性能**：  \n   - PEG含量50%、浓度0.05 wt%的液晶盒阈值电压为2.7 V，与传统聚酰亚胺排列层（2.6 V）相近，表明排列稳定性高。  \n   - 电压-透射率曲线与聚酰亚胺基器件相似，且在较低电压下达到平台，表明驱动电压可能更低。  \n\n**结论**  \n该研究成功利用低浓度（0.05 wt%）两亲性嵌段共聚物的原位自组装实现液晶垂直排列，避免了传统聚酰亚胺层的使用。该方法工艺简单、成本低，且电光性能与传统方法相当，有望应用于柔性液晶显示器件。  \n\n**与用户问题的相关性**  \n尽管文献未明确提及聚酰亚胺的玻璃化转变温度（Tg），但重点在于开发替代聚酰亚胺排列层的新方法。文中指出传统聚酰亚胺层存在工艺复杂和透光率低等问题，而本研究通过共聚物自组装提供了解决方案，但未涉及聚酰亚胺材料本身的Tg数据。因此，此文献不直接回答用户关于“玻璃化转变温度低于400°C的聚酰亚胺”的问题，而是聚焦于替代聚酰亚胺的排列技术。', '**文献总结：玻璃化转变温度低于400°C的聚酰亚胺研究**\n\n**文献信息**  \n标题：Sulfonated copolyimide membranes derived from a novel diamine monomer with pendant benzimidazole groups for fuel cells  \n作者：Wei Li, Xiaoxia Guo, David Aili, Santiago Martin, Qingfeng Li, Jianhua Fang  \n期刊：Journal of Membrane Science  \nDOI：http://dx.doi.org/10.1016/j.memsci.2015.01.048  \n\n---\n\n**1. 研究背景与目的**  \n本研究旨在开发一种具有优异化学稳定性和质子传导性的磺化聚酰亚胺（SPI）膜，用于质子交换膜燃料电池。聚酰亚胺主链的水解不稳定性是主要挑战，通过在聚合物主链中引入碱性基团（如苯并咪唑）来改善这一问题。\n\n**2. 研究方法与材料**  \n- **单体合成**：设计并合成了一种新型二胺单体BIPOB，其侧链含有苯并咪唑基团，以增强膜的稳定性和质子传导性。  \n- **聚合物制备**：通过无规共聚反应，将1,4,5,8-萘四甲酸二酐（NTDA）与磺化二胺单体BAPBDS及BIPOB以不同摩尔比（BAPBDS/BIPOB = 4/1、6/1、9/1、12/1）共聚，制备了一系列磺化聚酰亚胺（SPI）。  \n- **膜制备与表征**：采用溶液浇铸法制备透明、韧性的膜，并通过傅里叶变换红外光谱（FT-IR）、核磁共振（¹H NMR）、热重分析（TGA）、力学性能测试、离子交换容量（IEC）测定、吸水率、溶胀率、质子传导率以及化学稳定性（水解稳定性和自由基氧化稳定性）测试进行系统表征。\n\n**3. 主要发现与数据**  \n- **热稳定性**：TGA分析显示，磺酸基团的脱磺化温度在300–450°C范围内，而聚合物主链的分解温度高于500°C。**文献中未明确报道玻璃化转变温度（Tg）的具体数值，但热分解数据表明材料在高温下具有良好稳定性。**  \n- **化学稳定性**：  \n  - **自由基氧化稳定性**：通过Fenton测试评估，含苯并咪唑基团的SPI膜表现出显著优于无苯并咪唑基团类似物的稳定性（例如，BAPBDS/BIPOB = 4/1的膜在80°C下开始溶解的时间（τ1）为190分钟，完全溶解时间（τ2）为270分钟。  \n  - **水解稳定性**：在140°C去离子水中浸泡24小时后，BIPOB基SPI膜（如9/1比例）的重量损失仅为4%，粘度变化为-5%，远优于主链含苯并咪唑基团的SPI膜（重量损失10–12%，粘度损失30–42%）。  \n- **力学性能**：所有SPI膜在干燥状态下表现出高弹性模量（1.1–1.9 GPa）和拉伸强度（65–75 MPa）。  \n- **质子传导性**：在完全水合状态下，60°C时质子传导率约为0.1 S cm⁻¹，与Nafion® 212膜相当。  \n- **燃料电池测试**：初步电池测试显示，基于SPI膜的膜电极组件在40°C和60°C下具有与Nafion® 212膜相似的性能，且在短期测试中（如40小时，200 mA cm⁻²）未出现降解迹象。\n\n**4. 结论**  \n本研究成功合成了一种侧链含苯并咪唑基团的新型二胺单体BIPOB，并制备了相应的磺化聚酰亚胺膜。这些膜在保持高质子传导性的同时，显著提升了自由基氧化稳定性和水解稳定性。BIPOB的引入通过间隔基团（苯氧键）减轻了质子化苯并咪唑基团对酰亚胺环的电子 withdrawing 效应，从而显著改善水解稳定性。初步燃料电池测试证明了这些膜的技术可行性和稳定性。\n\n---\n\n**总结**：该文献重点报道了通过新型二胺单体BIPOB制备的磺化聚酰亚胺膜，其在化学稳定性、力学性能和质子传导性方面表现优异，但未提供玻璃化转变温度的具体数据，仅通过热分解温度间接反映了材料的高温稳定性。', '**文献总结：Substituents Effect on the Properties of Sulfonated Polyimide Copolymers**  \n**DOI:** 10.1002/pola.22782  \n\n**研究背景与目的**  \n本研究旨在探讨疏水取代基（甲基、甲氧基、氟、三氟甲基）和组分对磺化聚酰亚胺（SPI）共聚物性能的影响，重点关注其热稳定性、水解稳定性、氧化稳定性及质子传导性能，以评估其在燃料电池膜中的应用潜力。  \n\n**研究方法与实验条件**  \n1. **聚合物合成**：通过共缩聚反应合成了一系列SPI共聚物，使用1,4,5,8-萘四甲酸二酐（TCND）作为二酐单体，磺化二胺单体（1–5）与非磺化二胺共聚单体（6–8）进行聚合。共聚物组成（x）为0.5、0.7或0.9，离子交换容量（IEC）范围为1.34–1.91 mequiv/g。所有聚合物均具有高分子量（Mw > 200 kDa, Mn > 80 kDa），并通过溶液浇铸法制备了坚韧、柔性的膜。  \n2. **性能表征**：  \n   - **热稳定性**：通过热重分析/差热分析（TG/DTA）在氩气气氛下以10°C/min的升温速率从30°C加热至400°C。  \n   - **水解稳定性**：在140°C的加压水中浸泡24小时，通过重量损失评估。  \n   - **氧化稳定性**：在80°C的Fenton试剂（3% H₂O₂含2 ppm FeSO₄）中处理1小时。  \n   - **质子传导性**：在80°C、20–90%相对湿度下，使用四探针电导池测量。  \n\n**主要发现**  \n1. **热稳定性**：  \n   - SPI共聚物在干燥条件下表现出两步重量损失：第一步（30–150°C）为结合水蒸发，第二步（>200°C）为磺酸基团分解。  \n   - **电子结构影响**：含电子给体甲基的SPI（如SPI(2,6,0.5)）的热分解起始温度（250°C）比含三甲基苯磺酸基团的SPI（如SPI(5,8,0.7)）高约50°C（后者为200°C）。计算表明，甲基取代降低了C_芳香–SO₃H键的键能。  \n   - **玻璃化转变温度**：文献明确指出，所有SPI共聚物在DTA曲线中**未显示明显的玻璃化转变温度**。  \n   - 氟基团（–F或–CF₃）的引入未改善热稳定性。  \n\n2. **水解与氧化稳定性**：  \n   - **IEC主导作用**：水解稳定性主要取决于IEC值（IEC越高，稳定性越差）。IEC临界值约为1.9 mequiv/g，超过此值则膜完全溶解。  \n   - **取代基影响**：甲基取代略微提高水解稳定性，而氟基团（无论–F或–CF₃）对水解和氧化稳定性产生负面影响，可能因削弱分子间相互作用导致吸水率增加。  \n\n3. **质子传导性**：  \n   - 含氟和甲基的SPI（如SPI(4,6,0.5)）在低湿度下质子传导性显著高于未取代SPI（如SPI(1,6,0.5)），如SPI(4,6,0.5)在20%相对湿度下的传导率为4 × 10⁻⁴ S/cm，比未取代SPI高约60倍，归因于改善的亲水/疏水微相分离。  \n   - SPI(5,8,0.7)（IEC = 1.57 mequiv/g）表现出最佳综合性能，包括高质子传导性和稳定性。  \n\n**结论**  \nSPI共聚物的热稳定性受磺化芳香环电子结构影响，电子给体甲基降低分解温度。水解稳定性主要由IEC决定，氟基团引入降低稳定性。SPI(5,8,0.7)因其适中的IEC和包含双(苯氧基)联苯砜刚性疏水组分，在稳定性和质子传导性方面表现最佳，但需进一步优化以提高低湿度传导性和耐久性。**文献未报告任何SPI的玻璃化转变温度低于400°C**；相反，热分析显示分解起始温度不低于200°C。'], 'code': 0}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-09:30:39.832868/b6aa7294-b509-4689-a4ef-4870d7e97a4f result is {'summaries': ['很遗憾，您提供的文献全文存在严重的编码错误和乱码，无法从中提取任何关于聚酰亚胺玻璃化转变温度的具体信息。\n\n从文本中只能识别出一些零散的词语片段，如"聚酰亚胺"、"玻璃化转变温度"等关键词，但所有具体的研究方法、实验数据、结果和结论等重要信息都因文本损坏而无法读取。\n\n**建议：**\n1. 请提供原始的可读文献文件（PDF或标准文本格式）\n2. 或者提供文献的标题、作者、DOI等基本信息，以便查找相关摘要\n3. 如果这是从某个数据库导出的文件，建议重新导出或直接从原文复制文本内容\n\n一旦获得可读的文献内容，我将能够为您生成关于玻璃化转变温度低于400°C的聚酰亚胺研究的详细总结。', '**文献总结**  \n**标题：** The Effects of Particle Size on the Morphology and Properties of Polyimide/nano-Al2O3 Composite Films  \n**来源：** Polymers & Polymer Composites, Vol. 22, No. 2, 2014  \n\n**1. 研究背景与目的**  \n聚酰亚胺（PI）因其优异的机械性能、热稳定性和电绝缘性，广泛应用于微电子和航空航天领域。本研究旨在探讨不同粒径（30 nm、50 nm、100 nm）的纳米Al2O3颗粒对PI复合材料微观结构和性能的影响，特别是对机械性能、电击穿强度、介电性能和耐电晕性能的作用。\n\n**2. 研究方法**  \n- **材料制备：** 以PMDA和ODA为单体，通过原位聚合法制备PI/nano-Al2O3复合薄膜，其中Al2O3颗粒作为增强材料，含量未明确说明。  \n- **实验条件：** 复合薄膜经过阶梯升温处理（最高350°C，持续2小时），最终厚度为30±2 μm。  \n- **表征手段：** 使用SEM观察微观结构，测试拉伸强度、断裂伸长率、电击穿强度、介电常数和耐电晕时间。\n\n**3. 主要发现**  \n- **微观结构：** 30 nm Al2O3颗粒在PI基体中分散均匀，界面结合良好；随着粒径增大（50 nm、100 nm），出现颗粒团聚和相分离现象。  \n- **机械性能：** 拉伸强度随Al2O3粒径增大而降低（30 nm: 132.18 MPa；50 nm: 121.08 MPa；100 nm: 111.06 MPa）。断裂伸长率在50 nm时略有增加，但在100 nm时显著下降至13.42%。  \n- **电性能：**  \n  - 电击穿强度随粒径增大而降低（30 nm: 216.46 MV/m；50 nm: 190.44 MV/m；100 nm: 184.03 MV/m）。  \n  - 介电常数和介电损耗受粒径影响较小，基本保持稳定。  \n  - 耐电晕性能显著改善：30 nm Al2O3复合薄膜的耐电晕时间达99分钟，是纯PI薄膜（18分钟）的5.5倍；100 nm复合薄膜的耐电晕时间仅为30 nm薄膜的三分之一。\n\n**4. 结论**  \nAl2O3颗粒尺寸对PI复合薄膜的性能具有重要影响。较小粒径（30 nm）的Al2O3能够均匀分散，显著提升机械性能、电击穿强度和耐电晕性能；而较大粒径（100 nm）会导致颗粒团聚，破坏分子结构完整性，降低综合性能。\n\n**备注：** 文献中未明确提及聚酰亚胺基体的玻璃化转变温度（Tg），因此无法直接回应用户关于Tg低于400°C的问题。研究重点为纳米Al2O3填充对PI性能的调控，而非基体Tg的优化。', '**文献总结：甲基取代对6FDA基共聚酰亚胺热性能影响的研究**\n\n**文献信息**  \n标题：Effect of methyl group substitution in the diamine and copolymer composition on thermal degradation of copolyimides based on 2,2-bis(3,4-dicarboxyphenyl) hexafluoropropane dianhydride  \n作者：P. Santhana Gopala Krishnan, S. Veeramani  \n期刊：Polymer Degradation and Stability, 81 (2003) 225–232  \nDOI：10.1016/S0141-3910(03)00092-2  \n\n---\n\n**1. 研究背景与目的**  \n本研究旨在探讨二胺单体中甲基取代基及共聚物组成对基于6FDA（2,2-双(3,4-二羧基苯基)六氟丙烷二酐）的共聚酰亚胺热性能的影响。通过合成三种不同二胺组合的共聚酰亚胺系列，系统评估其玻璃化转变温度（Tg）和热稳定性。\n\n**2. 研究方法**  \n- **合成方法**：以6FDA为二酐，与不同摩尔比的二胺（包括无甲基的mPDA、单甲基的DAT和三甲基的TMemPDA）在N-甲基-2-吡咯烷酮（NMP）中通过两步法合成共聚酰亚胺（先形成聚酰胺酸，再化学亚胺化）。  \n- **表征技术**：采用特性粘度、GPC、DSC、XRD和TGA对聚合物进行表征。Tg通过DSC测定（升温速率10°C/min，温度范围100–400°C）。\n\n**3. 主要发现**  \n- **玻璃化转变温度（Tg）**：  \n  - 在[6FDA + TMemPDA + mPDA]和[6FDA + TMemPDA + DAT]系列中，Tg随TMemPDA含量增加而升高（例如：从323°C升至364°C）。  \n  - 在[6FDA + mPDA + DAT]系列中，Tg随DAT含量增加而升高（例如：从308°C升至327°C）。  \n  - 所有共聚酰亚胺的Tg均**低于400°C**，具体范围在308–364°C之间（详见表1数据）。  \n  - 作者指出，TMemPDA中三个甲基的空间位阻效应限制了苯环旋转，导致Tg升高。\n\n- **热稳定性**：  \n  - TGA显示，在空气和氮气中，5%重量损失温度分别高于450°C和500°C。  \n  - 热降解动力学符合一级反应模型，活化能（Ea）随TMemPDA或DAT含量增加而降低，归因于甲基的给电子效应提高了二胺区域的电子密度，使其更易氧化。  \n  - 所有共聚酰亚胺均为无定形结构（XRD证实）。\n\n**4. 结论**  \n本研究成功合成了多种6FDA基共聚酰亚胺，其Tg均低于400°C，且可通过调节二胺中甲基取代基的类型和含量进行调控。增加TMemPDA（三甲基）或DAT（单甲基）比例可提高Tg，但会略微降低热降解活化能。这些发现为设计具有特定Tg的聚酰亚胺材料提供了重要参考，尤其适用于气体分离膜等需要适中热稳定性的应用。\n\n---  \n**注**：总结基于文献中明确报告的数据，重点关注Tg低于400°C的共聚酰亚胺体系。', '**文献总结**  \n**标题：** Zeolitic imidazolate framework (ZIF-8) based polymer nanocomposite membranes for gas separation  \n**DOI:** 10.1039/c2ee21996d  \n\n**1. 研究背景与目的**  \n本研究旨在开发高性能混合基质膜（MMM），用于气体分离（如H₂、CO₂、O₂、N₂、CH₄），重点解决聚合物与填料间的界面相容性问题。研究以**Matrimid® 5218聚酰亚胺**为聚合物基质，ZIF-8纳米颗粒为填料，通过溶液混合法制备纳米复合膜，并系统研究其结构与气体传输性能。\n\n**2. 关键实验方法与条件**  \n- **材料：** 使用商业聚酰亚胺Matrimid® 5218作为基质，其玻璃化转变温度（*T*g）通过动态机械热分析（DMA）测定。  \n- **膜制备：** 将合成的ZIF-8纳米颗粒（粒径≈60 nm）直接分散于氯仿中，与聚合物溶液混合，浇铸成膜后在60–300°C范围内真空退火18小时。  \n- **表征技术：** 采用SEM、XRD、FTIR、气体吸附及PALS分析膜的形貌、结构和自由体积。  \n- **气体渗透测试：** 在22°C、4 bar条件下测试纯气体渗透性，采用时间滞后法计算扩散系数与溶解度。\n\n**3. 主要发现与数据**  \n- **玻璃化转变温度（*T*g）：**  \n  - 纯Matrimid®膜的*T*g为**330°C**。  \n  - 添加ZIF-8后，*T*g随填料负载量增加而升高：  \n    - 5 wt% ZIF-8 → *T*g = 336°C  \n    - 10 wt% → 346°C  \n  - 20 wt% → 343°C  \n  - 30 wt% → **349°C**（见表1）。  \n  - 退火温度影响*T*g，在230°C退火后*T*g稳定在343–349°C范围内。  \n- **气体渗透性：**  \n  - ZIF-8的加入显著提高了气体渗透性（如H₂和CO₂渗透性在30 wt%负载时增至纯膜的3倍），但选择性基本保持不变（如CO₂/CH₄选择性维持在24.9–39.1）。  \n- **自由体积分析：** PALS结果表明，ZIF-8的引入增大了聚合物的自由体积孔径（从1.95 Å增至2.53 Å），同时气体可经ZIF-8笼状结构自由扩散，共同导致渗透性提升。\n\n**4. 结论**  \n本研究成功制备了ZIF-8/Matrimid®纳米复合膜，实现了填料的高分散性和界面相容性。**Matrimid®的*T*g均高于330°C**，且随ZIF-8负载量增加而进一步升高（最高达349°C）。因此，该文献中研究的聚酰亚胺**不满足玻璃化转变温度低于400°C的要求**。\n\n---\n**注：** 本文献重点关注ZIF-8/聚酰亚胺复合膜的气体分离性能，未涉及*T*g低于400°C的聚酰亚胺材料。', '**文献总结**  \n**标题**: Thermomechanical Characteristics of Benzoxazine–Urethane Copolymers and Their Carbon Fiber-Reinforced Composites  \n**DOI**: 10.1002/app.30344  \n\n**研究背景与目的**  \n本研究开发了聚苯并噁嗪（BA-a）与聚氨酯弹性体（PU）的共聚物，旨在通过共聚改善聚苯并噁嗪的韧性，并评估不同异氰酸酯类型（TDI、MDI、IPDI）对共聚物性能的影响。共聚物进一步用作碳纤维复合材料的基体。\n\n**关键方法与实验条件**  \n- **共聚物制备**：BA-a与PU预聚体（基于TDI、MDI或IPDI）以不同质量比（如60:40、70:30等）混合，在80°C下熔融共混，并通过阶梯固化（150°C、170°C、190°C各1小时，200°C 2小时）形成共聚物。  \n- **表征技术**：采用差示扫描量热法（DSC）、动态机械分析（DMA）和热重分析（TGA）评估热机械性能。\n\n**主要发现与数据**  \n1. **玻璃化转变温度（Tg）**：  \n   - 纯BA-a的Tg为165°C，纯PU的Tg约为–70°C。  \n   - **共聚物Tg显著提高**：在所有异氰酸酯类型中，BA-a/PU共聚物的Tg均高于纯树脂。例如，在60:40 BA-a:PU体系中，所有共聚物的Tg均**超过230°C**，其中基于TDI的共聚物Tg最高。Tg随PU质量分数增加而上升（最高至40 wt%），归因于异氰酸酯与聚苯并噁嗪羟基反应增加交联密度。  \n   - 不同异氰酸酯的影响：TDI基共聚物Tg > MDI基 ≈ IPDI基。\n\n2. **热稳定性**：  \n   - 降解温度（Td，5%重量损失）从纯BA-a的321°C略微增加至共聚物的约330°C。\n\n3. **机械性能**：  \n   - **弯曲强度**：在BA-a:PU比例为90:10时，所有体系均显示协同效应（最大值）。TDI基共聚物在弯曲模量和强度上表现最佳。  \n   - **碳纤维复合材料**：基于TDI的BA-a:PU（60:40）复合材料在80 wt%纤维含量下弯曲强度达490 MPa，弯曲模量略降至48 GPa（纯BA-a为51 GPa）。\n\n**结论**  \nBA-a/PU共聚物通过引入PU有效提高了Tg（所有体系Tg > 230°C）和韧性，同时保持高热稳定性。TDI基共聚物综合性能最优，适用于高性能碳纤维复合材料。共聚物的高Tg和增强的机械性能使其在需要低温加工（固化温度≤200°C）且高耐热的应用中具有潜力。\n\n**注**：本文献未直接研究聚酰亚胺，但共聚物的Tg均低于400°C（实测最高Tg > 230°C），与用户问题中“玻璃化转变温度低于400°C”的要求相符。', "**文献总结：聚(甲基三氟丙基硅氧烷-b-酰亚胺)共聚物的制备与性能**\n\n**标题**：Preparation and Properties of Poly(methyltrifluoropropylsiloxane-b-imide) Copolymer. I  \n**DOI**：10.1002/app.10885  \n**作者**：Doo Whan Kang, Young Min Kim  \n**期刊**：Journal of Applied Polymer Science, Vol. 85, 2867–2874 (2002)\n\n---\n\n**研究背景**  \n聚酰亚胺以其优异的热稳定性和机械强度著称，但传统聚酰亚胺通常具有高玻璃化转变温度（Tg），限制了其加工性。本研究旨在通过引入柔性聚硅氧烷链段来降低聚酰亚胺的Tg，改善其性能。\n\n**研究方法**  \n1. **共聚物合成**：通过热酰亚胺化反应制备聚(甲基三氟丙基硅氧烷-嵌段-酰亚胺)共聚物（PSBPI）。使用3,3',4,4'-二苯甲酮四羧酸二酐（BTDA）、4,4'-二氨基二苯醚（ODA）以及α,ω-氨丙基封端的聚(甲基三氟丙基硅氧烷)预聚物（APMFS）作为原料。APMFS含量在二胺总量中从0变化至30 wt%。\n\n2. **表征技术**：采用FTIR和NMR确认结构；通过热重分析（TGA）、热机械分析（TMA）、动态机械分析（DMA）和拉伸测试评估热学与机械性能；利用SEM和AFM分析表面形貌。\n\n**主要发现**  \n1. **玻璃化转变温度（Tg）**：  \n   - 随着APMFS含量增加，共聚物的Tg显著降低。  \n   - 具体数据：APMFS含量为10 wt%时，Tg为271°C；20 wt%时为254°C；30 wt%时降至184°C。  \n   - DMA结果进一步证实了微相分离，显示出对应于APMFS软段（约-80°C）和BTDA-ODA硬段的两个Tg。\n\n2. **热性能**：  \n   - TGA显示初始热降解温度（Td）随APMFS含量增加而降低，归因于APMFS中丙基基团的热不稳定性。\n\n3. **机械与热膨胀性能**：  \n   - 拉伸强度随APMFS含量增加而下降。  \n   - 线性热膨胀系数（CTE）从161 μm/m°C（10 wt% APMFS）降至59 μm/m°C（30 wt% APMFS），可能与APMFS链段交联有关。\n\n4. **表面性能**：  \n   - SEM和AFM显示，APMFS含量影响表面形貌和粗糙度（Ra）。低含量（10 wt%）时表面粗糙（Ra=0.68 μm），高含量（30 wt%）时形成平滑连续相。\n\n**结论**  \n本研究成功合成了含有不同APMFS含量的聚酰亚胺嵌段共聚物。APMFS的引入有效降低了共聚物的Tg，最低达到184°C（APMFS含量30 wt%），同时改善了热膨胀性和表面特性。这些发现表明，通过调控APMFS含量，可以设计出Tg低于400°C的聚酰亚胺材料，适用于需要较低加工温度和高性能的应用领域。\n\n---  \n**总结**：该文献报道的聚酰亚胺嵌段共聚物通过引入聚硅氧烷链段，显著降低了玻璃化转变温度，最低为184°C，完全满足用户对Tg低于400°C的需求。", '**文献总结：基于磺化聚芳醚酮/聚乳酸嵌段共聚物的多孔质子交换膜**\n\n**标题：** Porous proton exchange membranes based on sulfonated poly(arylene ether ketone)/polylactide block copolymers for enhanced proton conductivity and dimensional stability  \n**DOI：** http://dx.doi.org/10.1016/j.ssi.2016.04.004  \n\n**文献相关性说明：** 本文献研究了磺化聚芳醚酮（SPAEK）基多孔质子交换膜，但全文未提及聚酰亚胺（polyimide）或玻璃化转变温度（Tg）数据。因此，该文献内容与用户查询“玻璃化转变温度低于400°C的聚酰亚胺”无直接关联。以下总结基于文献实际内容，聚焦于SPAEK基多孔膜的制备与性能。\n\n**研究方法与实验条件：**  \n1. **材料合成：** 通过亲核芳香取代反应合成羟基封端的磺化聚芳醚酮（SPAEK-OH），磺化度（DS）控制在40%、60%和80%。  \n2. **嵌段共聚物制备：** 以SPAEK-OH为引发剂，通过L-丙交酯的开环聚合制备SPAEK/PLA二嵌段共聚物，通过调节L-丙交酯投料量（5%、15%、50%重量比）控制PLA含量。  \n3. **多孔膜制备：** 采用溶剂浇铸法成膜，随后通过NaOH溶液选择性去除PLA相，形成多孔结构。  \n4. **孔结构调控：** 通过改变PLA含量，成功制备平均孔径为50 nm至2.6 μm的多孔膜。  \n5. **表征手段：** 包括核磁共振（NMR）、傅里叶变换红外光谱（FTIR）、扫描电子显微镜（SEM）、汞孔隙度测定法、热重分析（TGA）、拉伸测试、吸水率、尺寸溶胀、质子电导率和甲醇渗透性测试。\n\n**主要发现与数据：**  \n1. **质子电导率：**  \n   - 多孔膜的质子电导率显著高于无孔膜（相同DS下）。  \n   - 质子电导率随孔径增大而降低：最小孔径（50 nm）的膜（如SP-LA (80,5)）在70°C时电导率达0.129 S cm⁻¹，与Nafion 117相当。  \n   - 温度升高（至80°C）进一步提升了多孔膜的电导率。  \n\n2. **甲醇渗透性：**  \n   - 多孔膜的甲醇渗透性高于无孔膜，但所有SPAEK膜（包括多孔）均远低于Nafion 117。  \n   - 最小孔径（50 nm）膜表现出最低的甲醇渗透性。\n\n3. **吸水率与尺寸稳定性：**  \n   - 多孔膜吸水率显著高于无孔膜，但尺寸溶胀（长度和厚度变化）相对较小，归因于SPAEK基体聚合物刚性的主链结构提供了机械强度。  \n\n4. **热稳定性：**  \n   - TGA显示膜在180–300°C出现第一次重量损失（归因于-SO₃H基团分解）；主链降解起始于约380°C。孔径对热降解行为影响不显著。  \n\n5. **机械性能：**  \n   - 多孔膜的拉伸强度略低于无孔膜，且随孔径增大而降低；断裂伸长率低于Nafion 117。\n\n**结论：**  \n本研究成功开发了基于SPAEK/PLA嵌段共聚物的多孔质子交换膜，通过调控孔径（50 nm–2.6 μm）和磺化度（40–80%），实现了高质子电导率和良好尺寸稳定性的平衡。最小孔径（50 nm）膜综合性能最优，包括最高电导率和最低甲醇渗透性。尽管文献未涉及聚酰亚胺或玻璃化转变温度，但其多孔膜制备策略对高性能聚合物电解质膜设计具有参考价值。', "**文献总结：玻璃化转变温度低于400°C的聚酰亚胺复合材料研究**\n\n**标题：** Novel fiber reinforced bismaleimide/diallyl bisphenol A/microcapsules composites  \n**DOI：** 10.1002/pat.1755  \n\n**研究背景与目的：**  \n本研究旨在开发新型纤维增强双马来酰亚胺（BMI）/O,O'-二烯丙基双酚A（BA）/环氧树脂微胶囊（MCEs）复合材料，重点考察MCEs对复合材料力学性能、湿热耐受性及动态力学性能的影响。BMI树脂因其优异的热稳定性广泛应用于航空航天领域，但通常具有较高的玻璃化转变温度（Tg）。本研究通过改性BMI/BA体系，关注其Tg值。\n\n**研究方法与实验条件：**  \n- **材料：** 采用BMI与BA（重量比1:1）预聚物作为基体，添加三种不同直径（200 μm、140 μm、86 μm）的聚脲甲醛（PUF）微胶囊填充环氧树脂（MCEs），并以E-玻璃布作为增强纤维（纤维体积分数约40%）。  \n- **制备工艺：** 复合材料通过热压成型，固化温度循环为120°C/1 h + 150°C/1 h + 180°C/2 h + 200°C/2 h。  \n- **表征方法：** 使用扫描电子显微镜（SEM）和光学显微镜（OM）观察形貌；通过动态力学分析（DMA）和差示扫描量热法（DSC）测定Tg；力学性能（弯曲强度、层间剪切强度、冲击强度）和湿热耐受性（100°C沸水处理100 h）按中国标准测试。\n\n**主要发现与数据：**  \n- **玻璃化转变温度（Tg）：** DMA和DSC分析显示，所有纤维增强BMI/BA/MCEs复合材料的Tg值约为215°C（例如，图11和12中tan δ峰值温度）。MCEs的添加（含量最高至20 wt%）对Tg无显著影响，主要归因于复合材料固化温度不超过200°C，导致固化度较低，且BMI/BA树脂与MCEs在相同固化条件下Tg相近，导致tan δ曲线重叠为单一宽峰。  \n- **力学性能：** 适量MCEs（如2-10 wt%）可显著提高弯曲强度（最高增加13.8%）、层间剪切强度（最高增加15.1%）和冲击强度（最高增加25%），但过高含量（如>10 wt%）会因MCEs团聚和界面粘附减弱而降低性能。  \n- **湿热耐受性：** MCEs的适当添加能降低复合材料在沸水中的吸湿率，并提高力学性能保留率。  \n- **形貌分析：** MCEs嵌入树脂富集区，能抑制裂纹扩展，但过量会导致纤维-基体界面缺陷。\n\n**结论：**  \n本研究成功开发了纤维增强BMI/BA/MCEs复合材料，其中MCEs的添加在优化含量下可改善力学性能和湿热耐受性，但对Tg无显著影响。复合材料的Tg约为215°C，远低于400°C，这主要受限于固化工艺温度（≤200°C），而非MCEs的直接作用。该体系适用于对Tg要求不极端严苛但需综合性能提升的应用场景。\n\n**总结说明：**  \n本文献直接报告了BMI/BA基复合材料的Tg值为215°C，满足用户对Tg低于400°C的查询需求。研究重点在于MCEs对性能的改性，Tg结果源于实验条件而非材料本征设计。", '**文献总结：铜与聚酰亚胺的化学和物理相互作用研究**\n\n**标题**: A study of the chemical and physical interaction between copper and polyimide  \n**DOI**: 10.1116/1.576293  \n\n**研究背景与目的**  \n本研究旨在探讨基于均苯四甲酸二酐-氧二苯胺(PMDA-ODA)的聚酰胺酸前驱体在不同固化条件下与铜的相互作用，重点关注氧气水平对反应速率和材料性能的影响。\n\n**研究方法**  \n- **材料体系**: 使用PMDA-ODA型聚酰胺酸前驱体（杜邦公司商业产品），稀释在N-甲基吡咯烷酮溶剂中。  \n- **固化条件**: 在85°C、150°C、230°C、300°C（各30分钟）和350°C（1小时）的多阶段热固化过程中，系统改变固化环境中的氧气分压，包括空气（21% O₂）、1% O₂-N₂、0.3% O₂-N₂、真空和形成气体（10% H₂-N₂）等不同气氛。  \n- **分析技术**: 采用傅里叶变换红外光谱(FTIR)、X射线光电子能谱/俄歇电子能谱(ESCA/AES)、横截面透射电子显微镜(TEM)、铜片电阻测量和平行板电容测量等多种方法表征界面结构和材料性能。\n\n**主要发现**  \n1. **氧气依赖性的相互作用**: 在固化过程中，铜-聚酰胺酸界面上发生两种主要反应：(1)铜与聚酰胺酸的相互作用；(2)铜的氧化。这两种反应的速率均受氧气水平和氧气供应到界面的控制。\n\n2. **聚酰亚胺降解与性能劣化**: 在高氧环境（特别是氧气含量≥1%）下固化，尤其是薄涂层（如1.4 µm），会导致聚酰亚胺严重降解并在下方形成氧化铜膜。这导致：\n   - 聚酰亚胺薄膜介电常数升高\n   - 介电击穿强度降低\n- 金属-金属界面接触电阻增高\n- 聚酰亚胺与底层铜的粘附性下降\n\n3. **临界厚度效应**: 存在临界聚酰亚胺厚度，低于此厚度时铜氧化和铜-聚酰亚胺相互作用会导致完全降解的薄膜。\n\n3. **抑制策略的有效性**:  \n   - **降低氧气含量**: 在低氧环境（如0.3% O₂、真空或形成气体）中固化，可以显著抑制这两种降解机制，获得具有低介电常数、高介电击穿强度和高电导率铜的良好聚酰亚胺薄膜。\n   - **铬钝化层**: 在铜表面覆盖连续的铬薄膜（200-500 Å）可以有效抑制铜与聚酰亚胺的相互作用，即使在不利的高氧固化条件下也能保持良好质量的聚酰亚胺和铜薄膜。\n\n**结论**  \n铜-聚酰胺酸体系可被视为电化学腐蚀电池，铜氧化可能是铜-聚酰胺酸反应的先导。反应速率和降解程度取决于氧气水平以及氧气供应到界面的情况，这由聚合物涂层的厚度和固化环境中的氧气分压共同控制。通过最小化固化环境中的氧气含量或使用还原性气氛，或者采用铬等钝化金属，可以抑制这些反应，从而在铜表面上获得保持良好的低介电常数、高介电击穿强度和高电导率的聚酰亚胺薄膜。\n\n**备注**: 本文献主要研究铜与聚酰亚胺界面的相互作用及其对材料性能的影响，但未明确提及所研究聚酰亚胺的具体玻璃化转变温度数据。', "**文献总结**  \n**标题：** 6FDA-TAPOB Hyperbranched Polyimide-Silica Hybrids for Gas Separation Membranes  \n**DOI：** 10.1002/app.28145  \n\n**研究背景与目的**  \n本研究旨在开发具有优异气体分离性能的聚酰亚胺-二氧化硅杂化膜，重点关注其物理和气体传输特性。研究采用超支化聚酰亚胺（HBPI）与二氧化硅杂化，以提升材料的热稳定性和气体分离能力。\n\n**研究方法与实验条件**  \n- **材料合成：** 通过三胺1,3,5-三(4-氨基苯氧基)苯（TAPOB）和二酐4,4'-(六氟异亚丙基)二邻苯二甲酸酐（6FDA）的缩聚反应制备超支化聚酰胺酸前体，并利用3-氨丙基三甲氧基硅烷（APTrMOS）修饰部分端基。  \n- **杂化膜制备：** 采用溶胶-凝胶法，以四甲氧基硅烷（TMOS）和/或甲基三甲氧基硅烷（MTMS）作为硅源，在热酰亚胺化条件下（100°C、200°C、300°C各1小时）成膜。  \n- **表征与测试：** 使用热机械分析（TMA）测定玻璃化转变温度（Tg），热重分析（TGA）评估热稳定性，并通过气体渗透装置在25°C和76 cmHg条件下测量CO₂、O₂、N₂和CH₄的渗透性。\n\n**主要发现与数据**  \n- **玻璃化转变温度（Tg）：** 纯6FDA-TAPOB HBPI的Tg为282°C。在MTMS体系中，低二氧化硅含量区域（如10 wt% SiO₂）的Tg出现最小值（278°C），表明MTMS的甲基基团阻碍了三维Si–O–Si网络的形成，导致分子链约束减少。TMOS体系的Tg随二氧化硅含量增加而显著升高（如30 wt% SiO₂时达318°C），而TMOS/MTMS复合体系的Tg介于两者之间（如30 wt% SiO₂时为301°C）。所有测定的Tg值均低于400°C，符合用户问题要求。  \n- **热稳定性：** 杂化膜的5%失重温度（Td₅）随二氧化硅含量增加而提高，纯HBPI为457°C，TMOS体系（30 wt% SiO₂）升至509°C。  \n- **气体渗透性：** CO₂、O₂、N₂和CH₄的渗透系数均随二氧化硅含量增加而上升。例如，在MTMS体系中，CO₂渗透系数从纯HBPI的7.4 × 10⁻¹⁰ cm³(STP)cm/cm² s cmHg增至251 × 10⁻¹⁰（50 wt% SiO₂）。TMOS/MTMS复合体系在保持高CO₂/CH₄选择性的同时，显著提高了CO₂渗透性。  \n- **自由体积效应：** MTMS和TMOS/MTMS体系的气体扩散系数大幅提升，归因于松散的Si–O–Si网络增加了自由体积空穴的尺寸和数量。\n\n**结论**  \n6FDA-TAPOB超支化聚酰亚胺-二氧化硅杂化膜展现出高热稳定性和优异的气体分离性能，尤其在CO₂/CH₄分离方面具有潜力。MTMS的引入降低了Tg并增强了气体渗透性，而TMOS/MTMS复合体系实现了CO₂渗透性和选择性的同步提升。所有杂化膜的Tg均低于400°C，适用于中高温气体分离应用。", '**文献总结：聚酰胺酰亚胺-聚二甲基硅氧烷纳米复合材料的性能研究**\n\n**标题：** Mechanical, Surface, and Thermal Properties of Polyamideimide–Polydimethylsiloxane Nanocomposites Fabricated by Sol–Gel Process  \n**来源：** Journal of Applied Polymer Science, Vol. 91, 1774–1783 (2004)\n\n**研究背景与目的**  \n本研究旨在通过溶胶-凝胶法制备聚酰胺酰亚胺（PAI）与聚二甲基硅氧烷（PDMS）的纳米复合材料，旨在提高PAI的韧性并改善其表面性能，同时探索其热稳定性。用户关注的是玻璃化转变温度（Tg）低于400°C的聚酰亚胺相关材料，本文虽未直接提供PAI的Tg值，但通过DSC分析提供了相关热性能信息。\n\n**研究方法与实验条件**  \n- **材料合成：** 使用PAI与环氧硅烷（偶联剂）反应，再通过溶胶-凝胶过程与低聚PDMS（由二官能硅烷缩合而成）复合，最终在80°C下真空干燥成膜。  \n- **表征技术：** 采用FTIR确认化学结构，XPS分析表面元素分布，TGA和DGA评估热稳定性，DSC测量玻璃化转变温度。实验在氮气和氧气气氛下进行，加热速率分别为20°C/min（TGA）和10°C/min（DSC）。\n\n**主要发现与数据**  \n1. **热性能（TGA）：**  \n   - 在氮气气氛中，纯PAI在300°C以下因缩合反应出现重量损失，而PDMS添加的PAI在400°C开始热解，比纯PAI（450°C以上）低50°C，表明PDMS的加入略微降低了初始热稳定性。  \n   - 在约700°C的氧气气氛中，PAI-PDMS复合材料显示出显著增加的残炭浓度（高达45%，而纯PAI为0%），这归因于硅酸盐陶瓷的形成。  \n   - 残炭的增加可能提升材料的阻燃性和耐氧化性。\n\n2. **玻璃化转变温度（DSC）：**  \n   - DSC曲线显示，PAI的Tg未清晰出现，且PDMS的添加未明显影响PAI的Tg。文中提到，PDMS的Tg预计在约-100°C，但未在测量范围内（30–250°C）观察到。因此，PAI的Tg可能高于250°C，但具体值未明确测定，无法确认是否低于400°C。\n\n3. **机械与表面性能：**  \n   - 添加30 wt% PDMS到含30 wt%环氧硅烷的PAI中，最大伸长率和韧性显著提高（例如，韧性从9.50 MPa增至21.15 MPa），但拉伸强度略有下降。  \n   - XPS证实硅氧烷基团在表面富集，这可能改善水阻性、粘附性和耐磨性。\n\n**结论**  \n本研究通过溶胶-凝胶法成功制备了PAI-PDMS纳米复合材料，显著提高了韧性和表面性能，但热稳定性在初始阶段略有降低。尽管DSC未提供明确的Tg数据，但结果表明PAI的Tg可能未受PDMS添加的显著影响，且热解起始温度（400°C）低于纯PAI，但玻璃化转变温度本身未在文中明确报告。该方法为低温硫化提供了潜在解决方案，适用于电子和航空航天领域。\n\n**DOI信息：** 未在全文提供，但文献发表于Journal of Applied Polymer Science, 2004年。', '**文献总结：含羧基侧链聚酰亚胺复合材料的合成与力学性能**\n\n**标题：** Synthesis of High-performance Composites of Poly(4-vinylpyridine-co-styrene) Copolymer (P4VPy–St) and Polyimides (PI) Having Carboxyl Pendant Groups by in-situ Polymerization and Their Mechanical Properties  \n**DOI：** 10.1295/polymj.36.824\n\n**研究背景与目的**  \n本研究旨在通过原位聚合法制备聚(4-乙烯基吡啶-共-苯乙烯)(P4VPy–St)与含羧基侧链的聚酰亚胺(PI)的高性能复合材料。重点考察羧基含量对复合材料力学性能的影响，特别是通过氢键相互作用提高两组分间的相容性和拉伸强度。\n\n**研究方法**  \n1. **聚合物合成**：  \n   - **P4VPy–St共聚物**：通过苯乙烯与4-乙烯基吡啶的自由基共聚制备，组成比为4-VPy:St = 5:5。  \n   - **含羧基的聚酰亚胺(PI)**：以均苯四甲酸二酐(PMDA)为二酐单体，间苯二胺(MPDA)和3,5-二氨基苯甲酸(DABA)为二胺单体，通过调节DABA/MPDA的投料比（0-100 mol%）控制羧基含量。先合成聚酰胺酸(PAA)，再经阶梯热处理（120°C 1h, 180°C 1h, 220°C 2h，真空）进行酰亚胺化得到PI。\n\n2. **复合材料制备**：  \n   - **原位聚合法**：在P4VPy–St的DMAc溶液中原位聚合PAA，然后成膜并酰亚胺化。  \n   - **共混法**：分别合成P4VPy–St和PAA，然后在溶液中混合并成膜。\n\n3. **表征与测试**：  \n   - **力学性能**：通过拉伸试验测量拉伸强度、模量和断裂伸长率。  \n   - **热性能**：通过热重分析(TG)评估热分解行为。  \n   - **形貌分析**：使用扫描电子显微镜(SEM)观察断面形貌。  \n   - **结构分析**：采用FT-IR确认酰亚胺化和氢键形成。\n\n**主要发现**  \n1. **羧基含量对力学性能的影响**：  \n   - 随着PI中羧基含量（DABA投料比）的增加，复合材料的拉伸强度显著提高。例如，对于P4VPy–St/PI复合材料（50 wt% PI），当羧基含量从0 mol%增至100 mol%时：  \n     - 原位聚合法制备的样品拉伸强度从48.9 MPa增至70.1 MPa。  \n   - 拉伸模量和断裂伸长率也随羧基含量增加而提升。\n\n2. **氢键相互作用的关键作用**：  \n   - P4VPy–St中的吡啶基团与PI中的羧基之间形成氢键，显著增强了两种聚合物之间的相容性，从而提高了力学性能。\n\n3. **制备方法的影响**：  \n   - 原位聚合法制备的复合材料在所有羧基含量下均显示出比共混法更高的拉伸强度，表明原位聚合能实现更均匀的分子级分散。\n\n4. **热性能**：  \n   - 引入羧基侧链降低了复合材料的热分解温度，因为羧基的存在促进了热分解。\n\n5. **形貌观察**：  \n   - SEM显示，含羧基的PI复合材料断面更均匀，球形颗粒尺寸小于1 μm，表明相容性改善。\n\n**结论**  \n本研究成功通过原位聚合法制备了P4VPy–St与含羧基侧链PI的高性能复合材料。羧基含量的增加通过氢键相互作用有效提高了复合材料的相容性和拉伸强度。原位聚合方法相比传统共混法在提升力学性能方面更具优势。这项工作证明，在基体聚合物和增强聚合物之间引入吸引性相互作用（如氢键）并结合原位聚合策略，是制备高性能聚合物复合材料的有效途径。\n\n**注**：文献中未明确报告所研究聚酰亚胺的玻璃化转变温度(Tg)，因此无法直接确认其是否低于400°C。研究焦点在于羧基含量对力学性能和相容性的影响。', '**文献总结：垂直排列液晶用两亲性嵌段共聚物原位自组装层的研究**\n\n**标题**：Vertical Alignment of Liquid Crystals Using an In Situ Self-Assembled Layer of an Amphiphilic Block Copolymer  \n**DOI**：10.1007/s13233-016-4036-2  \n\n**背景与目的**  \n本研究旨在开发一种替代传统聚酰亚胺（polyimide）垂直排列层的方法，用于液晶（LC）的垂直排列。传统聚酰亚胺层形成过程复杂、耗时且降低器件透光率。为此，作者提出使用一种两亲性嵌段共聚物（聚乙烯-嵌段-聚乙二醇，PE-b-PEG）通过原位自组装形成排列层，简化工艺并降低成本。\n\n**研究方法**  \n- **材料**：使用PE-b-PEG嵌段共聚物（PEG含量20%和50%），将其掺杂到负性液晶（Δε=-3.1, Δn=0.095）中，浓度分别为0.05 wt%和0.1 wt%。  \n- **实验条件**：将共聚物与液晶在向列-各向同性转变温度（75°C）下混合，注入到无额外排列层的ITO玻璃基板液晶盒中（间隙5.25 μm）。液晶盒在120°C下退火1小时，然后缓慢冷却至室温，促进共聚物在ITO基板上自组装。  \n- **表征方法**：通过偏光显微镜（POM）观察液晶排列均匀性；接触角测量分析自组装层形成；电光特性测试（电压-透射率曲线和阈值电压）评估性能。\n\n**主要发现**  \n1. **排列效果**：  \n   - PEG含量50%、浓度0.05 wt%的样品显示出最均匀的垂直排列（POM图像呈暗态），而PEG含量20%或高浓度（0.1 wt%）样品出现随机纹理，排列不均匀。  \n   - 高PEG含量（50%）提供足够的锚定力，使共聚物稳定附着在亲水性ITO基板上，而低浓度减少共聚物聚集，优化排列。  \n\n2. **自组装层验证**：接触角测量显示，自组装层的水接触角（70°–80°）高于裸ITO基板（57.5°），证实疏水性PE链在基板表面形成有序层。  \n\n3. **电光性能**：  \n   - PEG含量50%、浓度0.05 wt%的液晶盒阈值电压为2.7 V，与传统聚酰亚胺排列层（2.6 V）相近，表明排列稳定性高。  \n   - 电压-透射率曲线与聚酰亚胺基器件相似，且在较低电压下达到平台，表明驱动电压可能更低。  \n\n**结论**  \n该研究成功利用低浓度（0.05 wt%）两亲性嵌段共聚物的原位自组装实现液晶垂直排列，避免了传统聚酰亚胺层的使用。该方法工艺简单、成本低，且电光性能与传统方法相当，有望应用于柔性液晶显示器件。  \n\n**与用户问题的相关性**  \n尽管文献未明确提及聚酰亚胺的玻璃化转变温度（Tg），但重点在于开发替代聚酰亚胺排列层的新方法。文中指出传统聚酰亚胺层存在工艺复杂和透光率低等问题，而本研究通过共聚物自组装提供了解决方案，但未涉及聚酰亚胺材料本身的Tg数据。因此，此文献不直接回答用户关于“玻璃化转变温度低于400°C的聚酰亚胺”的问题，而是聚焦于替代聚酰亚胺的排列技术。', '**文献总结：玻璃化转变温度低于400°C的聚酰亚胺研究**\n\n**文献信息**  \n标题：Sulfonated copolyimide membranes derived from a novel diamine monomer with pendant benzimidazole groups for fuel cells  \n作者：Wei Li, Xiaoxia Guo, David Aili, Santiago Martin, Qingfeng Li, Jianhua Fang  \n期刊：Journal of Membrane Science  \nDOI：http://dx.doi.org/10.1016/j.memsci.2015.01.048  \n\n---\n\n**1. 研究背景与目的**  \n本研究旨在开发一种具有优异化学稳定性和质子传导性的磺化聚酰亚胺（SPI）膜，用于质子交换膜燃料电池。聚酰亚胺主链的水解不稳定性是主要挑战，通过在聚合物主链中引入碱性基团（如苯并咪唑）来改善这一问题。\n\n**2. 研究方法与材料**  \n- **单体合成**：设计并合成了一种新型二胺单体BIPOB，其侧链含有苯并咪唑基团，以增强膜的稳定性和质子传导性。  \n- **聚合物制备**：通过无规共聚反应，将1,4,5,8-萘四甲酸二酐（NTDA）与磺化二胺单体BAPBDS及BIPOB以不同摩尔比（BAPBDS/BIPOB = 4/1、6/1、9/1、12/1）共聚，制备了一系列磺化聚酰亚胺（SPI）。  \n- **膜制备与表征**：采用溶液浇铸法制备透明、韧性的膜，并通过傅里叶变换红外光谱（FT-IR）、核磁共振（¹H NMR）、热重分析（TGA）、力学性能测试、离子交换容量（IEC）测定、吸水率、溶胀率、质子传导率以及化学稳定性（水解稳定性和自由基氧化稳定性）测试进行系统表征。\n\n**3. 主要发现与数据**  \n- **热稳定性**：TGA分析显示，磺酸基团的脱磺化温度在300–450°C范围内，而聚合物主链的分解温度高于500°C。**文献中未明确报道玻璃化转变温度（Tg）的具体数值，但热分解数据表明材料在高温下具有良好稳定性。**  \n- **化学稳定性**：  \n  - **自由基氧化稳定性**：通过Fenton测试评估，含苯并咪唑基团的SPI膜表现出显著优于无苯并咪唑基团类似物的稳定性（例如，BAPBDS/BIPOB = 4/1的膜在80°C下开始溶解的时间（τ1）为190分钟，完全溶解时间（τ2）为270分钟。  \n  - **水解稳定性**：在140°C去离子水中浸泡24小时后，BIPOB基SPI膜（如9/1比例）的重量损失仅为4%，粘度变化为-5%，远优于主链含苯并咪唑基团的SPI膜（重量损失10–12%，粘度损失30–42%）。  \n- **力学性能**：所有SPI膜在干燥状态下表现出高弹性模量（1.1–1.9 GPa）和拉伸强度（65–75 MPa）。  \n- **质子传导性**：在完全水合状态下，60°C时质子传导率约为0.1 S cm⁻¹，与Nafion® 212膜相当。  \n- **燃料电池测试**：初步电池测试显示，基于SPI膜的膜电极组件在40°C和60°C下具有与Nafion® 212膜相似的性能，且在短期测试中（如40小时，200 mA cm⁻²）未出现降解迹象。\n\n**4. 结论**  \n本研究成功合成了一种侧链含苯并咪唑基团的新型二胺单体BIPOB，并制备了相应的磺化聚酰亚胺膜。这些膜在保持高质子传导性的同时，显著提升了自由基氧化稳定性和水解稳定性。BIPOB的引入通过间隔基团（苯氧键）减轻了质子化苯并咪唑基团对酰亚胺环的电子 withdrawing 效应，从而显著改善水解稳定性。初步燃料电池测试证明了这些膜的技术可行性和稳定性。\n\n---\n\n**总结**：该文献重点报道了通过新型二胺单体BIPOB制备的磺化聚酰亚胺膜，其在化学稳定性、力学性能和质子传导性方面表现优异，但未提供玻璃化转变温度的具体数据，仅通过热分解温度间接反映了材料的高温稳定性。', '**文献总结：Substituents Effect on the Properties of Sulfonated Polyimide Copolymers**  \n**DOI:** 10.1002/pola.22782  \n\n**研究背景与目的**  \n本研究旨在探讨疏水取代基（甲基、甲氧基、氟、三氟甲基）和组分对磺化聚酰亚胺（SPI）共聚物性能的影响，重点关注其热稳定性、水解稳定性、氧化稳定性及质子传导性能，以评估其在燃料电池膜中的应用潜力。  \n\n**研究方法与实验条件**  \n1. **聚合物合成**：通过共缩聚反应合成了一系列SPI共聚物，使用1,4,5,8-萘四甲酸二酐（TCND）作为二酐单体，磺化二胺单体（1–5）与非磺化二胺共聚单体（6–8）进行聚合。共聚物组成（x）为0.5、0.7或0.9，离子交换容量（IEC）范围为1.34–1.91 mequiv/g。所有聚合物均具有高分子量（Mw > 200 kDa, Mn > 80 kDa），并通过溶液浇铸法制备了坚韧、柔性的膜。  \n2. **性能表征**：  \n   - **热稳定性**：通过热重分析/差热分析（TG/DTA）在氩气气氛下以10°C/min的升温速率从30°C加热至400°C。  \n   - **水解稳定性**：在140°C的加压水中浸泡24小时，通过重量损失评估。  \n   - **氧化稳定性**：在80°C的Fenton试剂（3% H₂O₂含2 ppm FeSO₄）中处理1小时。  \n   - **质子传导性**：在80°C、20–90%相对湿度下，使用四探针电导池测量。  \n\n**主要发现**  \n1. **热稳定性**：  \n   - SPI共聚物在干燥条件下表现出两步重量损失：第一步（30–150°C）为结合水蒸发，第二步（>200°C）为磺酸基团分解。  \n   - **电子结构影响**：含电子给体甲基的SPI（如SPI(2,6,0.5)）的热分解起始温度（250°C）比含三甲基苯磺酸基团的SPI（如SPI(5,8,0.7)）高约50°C（后者为200°C）。计算表明，甲基取代降低了C_芳香–SO₃H键的键能。  \n   - **玻璃化转变温度**：文献明确指出，所有SPI共聚物在DTA曲线中**未显示明显的玻璃化转变温度**。  \n   - 氟基团（–F或–CF₃）的引入未改善热稳定性。  \n\n2. **水解与氧化稳定性**：  \n   - **IEC主导作用**：水解稳定性主要取决于IEC值（IEC越高，稳定性越差）。IEC临界值约为1.9 mequiv/g，超过此值则膜完全溶解。  \n   - **取代基影响**：甲基取代略微提高水解稳定性，而氟基团（无论–F或–CF₃）对水解和氧化稳定性产生负面影响，可能因削弱分子间相互作用导致吸水率增加。  \n\n3. **质子传导性**：  \n   - 含氟和甲基的SPI（如SPI(4,6,0.5)）在低湿度下质子传导性显著高于未取代SPI（如SPI(1,6,0.5)），如SPI(4,6,0.5)在20%相对湿度下的传导率为4 × 10⁻⁴ S/cm，比未取代SPI高约60倍，归因于改善的亲水/疏水微相分离。  \n   - SPI(5,8,0.7)（IEC = 1.57 mequiv/g）表现出最佳综合性能，包括高质子传导性和稳定性。  \n\n**结论**  \nSPI共聚物的热稳定性受磺化芳香环电子结构影响，电子给体甲基降低分解温度。水解稳定性主要由IEC决定，氟基团引入降低稳定性。SPI(5,8,0.7)因其适中的IEC和包含双(苯氧基)联苯砜刚性疏水组分，在稳定性和质子传导性方面表现最佳，但需进一步优化以提高低湿度传导性和耐久性。**文献未报告任何SPI的玻璃化转变温度低于400°C**；相反，热分析显示分解起始温度不低于200°C。'], 'code': 0}
+INFO:     101.201.40.38:38364 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:41736 - "POST /messages/?session_id=971374cebbf64a74a95acdbf1d0d7107 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.143:55666 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.143:56748 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.143:56764 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.143:33904 - "GET /security.txt HTTP/1.1" 404 Not Found
+INFO:     204.76.203.51:36094 - "GET http%3A//azenv.net/ HTTP/1.1" 404 Not Found
+INFO:     101.201.40.38:59564 - "GET /sse HTTP/1.1" 200 OK
+INFO:     101.201.40.38:59580 - "POST /messages/?session_id=881cc3d756044b28a2855a0b0fb1e106 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:59580 - "POST /messages/?session_id=881cc3d756044b28a2855a0b0fb1e106 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:59580 - "POST /messages/?session_id=881cc3d756044b28a2855a0b0fb1e106 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57952 - "GET /sse HTTP/1.1" 200 OK
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:09:37,500 - INFO - Job processing (Trace ID: 2025-12-01-14:09:37.499966)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:09:37.499966)
+INFO:__main__:收到查询: 查找液晶与高熵合金结合的相关研究论文，包括液晶材料与高熵合金的复合材料、界面相互作用、性能调控等
+INFO:root:开始处理查询: 查找液晶与高熵合金结合的相关研究论文，包括液晶材料与高熵合金的复合材料、界面相互作用、性能调控等
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:09:38,560 - INFO - Job 2025-12-01-14:09:37.499966/9a40010a-45cd-48e4-a5e9-ee3dc98dd20c result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:09:37.499966/9a40010a-45cd-48e4-a5e9-ee3dc98dd20c result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:09:43,267 - INFO - Job processing (Trace ID: 2025-12-01-14:09:43.267429)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:09:43.267429)
+INFO:__main__:收到查询: 查找液晶材料与金属或合金复合材料的研究，包括液晶聚合物与金属的界面、液晶在金属表面的取向、液晶-金属复合材料性能
+INFO:root:开始处理查询: 查找液晶材料与金属或合金复合材料的研究，包括液晶聚合物与金属的界面、液晶在金属表面的取向、液晶-金属复合材料性能
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:09:44,345 - INFO - Job 2025-12-01-14:09:43.267429/31f8c642-23d8-4a37-a0ce-d5224be0df50 result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:09:43.267429/31f8c642-23d8-4a37-a0ce-d5224be0df50 result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:09:47,934 - INFO - Job processing (Trace ID: 2025-12-01-14:09:47.934433)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:09:47.934433)
+INFO:__main__:收到查询: 查找液晶聚合物材料的研究，包括液晶聚合物的合成、性能、应用以及与其它材料的复合材料
+INFO:root:开始处理查询: 查找液晶聚合物材料的研究，包括液晶聚合物的合成、性能、应用以及与其它材料的复合材料
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:09:48,818 - INFO - Job 2025-12-01-14:09:47.934433/950d5d47-ecf3-420d-84a6-31f1749bfed8 result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:09:47.934433/950d5d47-ecf3-420d-84a6-31f1749bfed8 result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:09:52,437 - INFO - Job processing (Trace ID: 2025-12-01-14:09:52.437523)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:09:52.437523)
+INFO:__main__:收到查询: 查找高熵合金材料的研究，包括高熵合金的合成、性能、应用以及与其它材料的复合材料
+INFO:root:开始处理查询: 查找高熵合金材料的研究，包括高熵合金的合成、性能、应用以及与其它材料的复合材料
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:09:53,370 - INFO - Job 2025-12-01-14:09:52.437523/80812aa2-9726-420a-8e90-1ac067c723d1 result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:09:52.437523/80812aa2-9726-420a-8e90-1ac067c723d1 result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:09:57,150 - INFO - Job processing (Trace ID: 2025-12-01-14:09:57.150542)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:09:57.150542)
+INFO:__main__:收到查询: 查找聚合物材料的研究，包括聚合物合成、性能、应用以及与其它材料的复合材料
+INFO:root:开始处理查询: 查找聚合物材料的研究，包括聚合物合成、性能、应用以及与其它材料的复合材料
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:09:58,149 - INFO - Job 2025-12-01-14:09:57.150542/596f7b3e-85c5-4f95-a18d-ab21798617e7 result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:09:57.150542/596f7b3e-85c5-4f95-a18d-ab21798617e7 result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:57962 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:56048 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:56048 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:56048 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:56048 - "POST /messages/?session_id=896021a696ce497ead8833334e2cecb5 HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42452 - "GET /sse HTTP/1.1" 200 OK
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:12:12,699 - INFO - Job processing (Trace ID: 2025-12-01-14:12:12.699603)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:12:12.699603)
+INFO:__main__:收到查询: 查找高熵合金在低温下的力学性能研究，包括低温拉伸性能、断裂韧性、变形机制以及影响低温性能的主要因素
+INFO:root:开始处理查询: 查找高熵合金在低温下的力学性能研究，包括低温拉伸性能、断裂韧性、变形机制以及影响低温性能的主要因素
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:12:13,616 - INFO - Job 2025-12-01-14:12:12.699603/22ef1588-f2d0-4318-8dd7-c5cc225aadaf result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:12:12.699603/22ef1588-f2d0-4318-8dd7-c5cc225aadaf result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:12:17,919 - INFO - Job processing (Trace ID: 2025-12-01-14:12:17.919943)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:12:17.919943)
+INFO:__main__:收到查询: 高熵合金低温力学性能 低温拉伸 低温韧性 变形机制 影响因素
+INFO:root:开始处理查询: 高熵合金低温力学性能 低温拉伸 低温韧性 变形机制 影响因素
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:12:19,163 - INFO - Job 2025-12-01-14:12:17.919943/45e0cc48-3444-4159-a06f-a3d7a4b7c16b result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:12:17.919943/45e0cc48-3444-4159-a06f-a3d7a4b7c16b result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:12:23,134 - INFO - Job processing (Trace ID: 2025-12-01-14:12:23.134843)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:12:23.134843)
+INFO:__main__:收到查询: 合金材料低温力学性能 低温环境下的材料性能 低温变形机制
+INFO:root:开始处理查询: 合金材料低温力学性能 低温环境下的材料性能 低温变形机制
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:12:24,000 - INFO - Job 2025-12-01-14:12:23.134843/bde738f6-f54d-4bbe-bb45-83136b9af500 result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:12:23.134843/bde738f6-f54d-4bbe-bb45-83136b9af500 result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:12:27,670 - INFO - Job processing (Trace ID: 2025-12-01-14:12:27.670174)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:12:27.670174)
+INFO:__main__:收到查询: 低温环境材料性能 低温拉伸试验 低温断裂韧性
+INFO:root:开始处理查询: 低温环境材料性能 低温拉伸试验 低温断裂韧性
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:12:28,575 - INFO - Job 2025-12-01-14:12:27.670174/d7a96ed7-c4f3-4828-b2d3-2173a62efaba result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:12:27.670174/d7a96ed7-c4f3-4828-b2d3-2173a62efaba result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+2025-12-01 14:12:33,035 - INFO - Job processing (Trace ID: 2025-12-01-14:12:33.035033)
+INFO:dp.agent.server.calculation_mcp_server:Job processing (Trace ID: 2025-12-01-14:12:33.035033)
+INFO:__main__:收到查询: 材料力学性能 环境温度影响 温度对材料性能的影响
+INFO:root:开始处理查询: 材料力学性能 环境温度影响 温度对材料性能的影响
+INFO:root:步骤1: 转换自然语言查询为结构化filters...
+ERROR:root:转换查询为filters失败: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/chembrain/server/server.py", line 158, in _convert_query_to_filters
+    response.raise_for_status()
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.siliconflow.cn/v1/chat/completions
+WARNING:root:无法转换查询为结构化filters
+2025-12-01 14:12:34,116 - INFO - Job 2025-12-01-14:12:33.035033/0ea9071a-67f8-4d2e-b8a6-a132b8baabac result is {'summaries': [], 'code': 4}
+INFO:dp.agent.server.calculation_mcp_server:Job 2025-12-01-14:12:33.035033/0ea9071a-67f8-4d2e-b8a6-a132b8baabac result is {'summaries': [], 'code': 4}
+INFO:     101.201.40.38:42466 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+INFO:     101.201.40.38:51574 - "POST /messages/?session_id=ebc4413753b747eaa444d5afeab37c8a HTTP/1.1" 202 Accepted
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.

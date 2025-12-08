@@ -1,0 +1,96 @@
+usage: server.py [-h] [--port PORT] [--host HOST]
+                 [--log-level {DEBUG,INFO,WARNING,ERROR}]
+server.py: error: unrecognized arguments: 2>&1 &
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting SSEkb MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50007
+INFO:__main__:Structured search system ready
+INFO:     Started server process [3482]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50007 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3482]
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/ssebrain/server/server.py", line 510, in <module>
+    mcp.run(transport="sse")
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/dp/agent/server/calculation_mcp_server.py", line 473, in run
+    self.mcp.run(**kwargs)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/mcp/server/fastmcp/server.py", line 284, in run
+    anyio.run(lambda: self.run_sse_async(mount_path))
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_core/_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2325, in run
+    return runner.run(wrapper())
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 218, in run
+    return self._loop.run_until_complete(task)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+asyncio.exceptions.CancelledError
+usage: server.py [-h] [--port PORT] [--host HOST]
+                 [--log-level {DEBUG,INFO,WARNING,ERROR}]
+server.py: error: unrecognized arguments: 2>&1 &
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting SSEkb MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50007
+INFO:__main__:Structured search system ready
+INFO:     Started server process [3922]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50007 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3922]
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/ssebrain/server/server.py", line 510, in <module>
+    mcp.run(transport="sse")
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/dp/agent/server/calculation_mcp_server.py", line 473, in run
+    self.mcp.run(**kwargs)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/mcp/server/fastmcp/server.py", line 284, in run
+    anyio.run(lambda: self.run_sse_async(mount_path))
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_core/_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2325, in run
+    return runner.run(wrapper())
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 218, in run
+    return self._loop.run_until_complete(task)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+asyncio.exceptions.CancelledError
+usage: server.py [-h] [--port PORT] [--host HOST]
+                 [--log-level {DEBUG,INFO,WARNING,ERROR}]
+server.py: error: unrecognized arguments: 2>&1 &
+INFO:root:初始化结构化检索系统...
+INFO:root:结构化检索系统初始化完成！
+INFO:__main__:Starting SSEkb MCP Server...
+INFO:__main__:Server will run on 0.0.0.0:50007
+INFO:__main__:Structured search system ready
+INFO:     Started server process [4654]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:50007 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4654]
+Traceback (most recent call last):
+  File "/home/knowledge_base/domains/ssebrain/server/server.py", line 510, in <module>
+    mcp.run(transport="sse")
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/dp/agent/server/calculation_mcp_server.py", line 473, in run
+    self.mcp.run(**kwargs)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/mcp/server/fastmcp/server.py", line 284, in run
+    anyio.run(lambda: self.run_sse_async(mount_path))
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_core/_eventloop.py", line 74, in run
+    return async_backend.run(func, args, {}, backend_options)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2325, in run
+    return runner.run(wrapper())
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 218, in run
+    return self._loop.run_until_complete(task)
+  File "/opt/mamba/envs/hea_rag/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+asyncio.exceptions.CancelledError
