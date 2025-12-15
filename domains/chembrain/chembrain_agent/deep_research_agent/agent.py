@@ -68,11 +68,11 @@ def paper_list_before_agent(callback_context: CallbackContext):
         callback_context._event_actions.escalate = True
         return
 
-    # only take the first 10 papers to perform deep research
+    # only take the first 20 papers to perform deep research
     print(f"before filter:{len(paper_list)}")
     callback_context.state['paper_list'] = {
         f'paper{i + 1}': paper
-        for i, paper in enumerate(paper_list[: min(10, len(paper_list))])
+        for i, paper in enumerate(paper_list[: min(20, len(paper_list))])
     }
     print(f"paper_list: {len(callback_context.state['paper_list'])}")
     return

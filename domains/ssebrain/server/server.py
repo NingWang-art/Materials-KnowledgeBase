@@ -65,6 +65,8 @@ sys.path.insert(0, str(Path("/home/knowledge_base/domains")))
 # 使用ssebrain_agent中的DatabaseManager，它支持solid_state_electrolyte_db
 from ssebrain.ssebrain_agent.tools.database import DatabaseManager
 
+MAX_FULLTEXT_SUMMARIES = 20  # deep research时最多处理的全文文献数
+
 # === ARG PARSING ===
 def parse_args():
     parser = argparse.ArgumentParser(description="SSEBrain Structured Search MCP Server")
@@ -372,6 +374,11 @@ class StructuredSearchSystem:
             
             # 步骤4: 只对有全文的DOI进行并行读取和总结生成
             if dois_with_fulltext:
+                if len(dois_with_fulltext) > MAX_FULLTEXT_SUMMARIES:
+                    logging.info(
+                        f"限制有全文文献数为 {MAX_FULLTEXT_SUMMARIES} (原有 {len(dois_with_fulltext)} 篇)"
+                    )
+                    dois_with_fulltext = dois_with_fulltext[:MAX_FULLTEXT_SUMMARIES]
                 logging.info(f"步骤4: 对 {len(dois_with_fulltext)} 篇有全文的文献进行总结生成...")
                 
                 # 创建适配函数：将DOI转换为file_id格式（用于generate_literature_summaries_parallel）
